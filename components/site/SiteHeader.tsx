@@ -26,16 +26,16 @@ export function SiteHeader() {
           {/* Logo */}
           <Link
             href={localizedPath("/", locale)}
-            aria-label="SMP İstanbul ana sayfa"
+            aria-label="SMP İstanbul Ana Sayfa"
             className="flex shrink-0 items-center"
           >
             <Image
               src="/images/logo.png"
               alt="SMP İstanbul"
               width={100}
-              height={30}
+              height={40}
               priority
-            /*   className="h-auto w-[120px] sm:w-[145px]" */
+             className="h-auto w-[100px] sm:w-[100px]"
             />
           </Link>
 
