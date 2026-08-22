@@ -1,0 +1,379 @@
+{
+  "meta": {
+    "locale": "en"
+  },
+  "Home": {
+    "meta": {
+      "title": "Home",
+      "description": "Premium scalp micropigmentation in Istanbul. Achieve a natural and minimal look with hair simulation."
+    },
+    "hero": {
+      "kicker": "ISTANBUL • SMP",
+      "title": "Natural look, minimal touch",
+      "subtitle": "Hair simulation (SMP) creates a more balanced density perception with a premium and professional approach."
+    },
+    "cards": {
+      "simulation": {
+        "title": "Hair Simulation",
+        "text": "A planned process that naturally improves density perception."
+      },
+      "gallery": {
+        "title": "Gallery",
+        "text": "Sample before/after comparisons to preview outcomes."
+      },
+      "services": {
+        "title": "Services",
+        "text": "Service scope, approach, and aftercare details."
+      },
+      "explore": "Explore →"
+    },
+    "gallery": {
+      "ariaLabel": "Before / after preview",
+      "kicker": "BEFORE / AFTER",
+      "title": "Planning for natural results",
+      "subtitle": "SMP outcomes depend on correct density planning and pigment selection.",
+      "sample": "Before / After (sample)"
+    },
+    "contact": {
+      "kicker": "CONTACT",
+      "title": "Leave a quick message",
+      "subtitle": "Share your current status and goals. We will get back to you quickly with suitable availability in Istanbul.",
+      "whatToShare": "What should you share?",
+      "items": {
+        "cityPhone": "City and phone number",
+        "hairLossType": "Hair loss type",
+        "dateMessage": "Preferred date and short message"
+      }
+    },
+    "form": {
+      "heading": "Appointment Request",
+      "helperText": "Fill out the form for a free initial assessment in Istanbul.",
+      "submit": "Send Request",
+      "name": "Full Name",
+      "phone": "Phone",
+      "city": "City",
+      "hairLossType": "Hair loss type",
+      "date": "Preferred appointment date",
+      "message": "Message",
+      "select": "Select...",
+      "messagePlaceholder": "Briefly describe your condition and expectation.",
+      "contact": "Contact",
+      "sending": "Sending...",
+      "successBody": "You can also reach us quickly via WhatsApp.",
+      "errorTitle": "Error",
+      "networkError": "A network error occurred. Please try again or contact us via WhatsApp.",
+      "genericError": "Something went wrong. Please try again.",
+      "successMessage": "Thank you. We received your request and will contact you shortly.",
+      "hairLossOptions": {
+        "pattern": "Pattern hair loss",
+        "thinning": "Hair thinning",
+        "hairline": "Hairline correction",
+        "scar": "Scar softening",
+        "other": "Other"
+      }
+    },
+    "blog": {
+      "kicker":"BLOG",
+      "title": "Short guide articles",
+      "subtitle": "Short notes about process and aftercare.",
+      "cta": "Explore blog"
+    },
+    "testimonials": {
+      "ariaLabel": "Client reviews",
+      "kicker": "CLIENT REVIEWS",
+      "title": "Real experiences, natural results",
+      "subtitle": "Short notes from clients about their experience, process, and results.",
+      "ratingLabel": "{rating} stars"
+    }
+  },
+  "Services": {
+    "meta": {
+      "title": "Services",
+      "description": "Premium SMP in Istanbul. Planned sessions and aftercare for natural-looking outcomes."
+    },
+    "hero": {
+      "kicker": "SERVICES",
+      "title": "Service scope",
+      "subtitle": "A planned process for minimal, professional, and natural results."
+    },
+    "items": {
+      "smp": {
+        "title": "Hair simulation (SMP)",
+        "description": "Planned application with micro pigment points to balance density perception.",
+        "b1": "Natural density planning",
+        "b2": "Minimal premium look",
+        "b3": "Aftercare guidance"
+      },
+      "thinning": {
+        "title": "Thinning support",
+        "description": "A more even look through tone and density distribution aligned with existing hair.",
+        "b1": "Tone harmony",
+        "b2": "Soft transitions",
+        "b3": "Daily wear focus"
+      },
+      "scar": {
+        "title": "Scar and line softening",
+        "description": "Precise mapping to create a more balanced appearance in specific areas.",
+        "b1": "Precise mapping",
+        "b2": "Natural boundaries",
+        "b3": "Personalized planning"
+      }
+    },
+    "contact": {
+      "title": "For appointment",
+      "subtitle": "You can leave a short message on the contact page.",
+      "cta": "Contact us"
+    },
+    "simulation": {
+      "meta": {
+        "title": "Hair Simulation Istanbul",
+        "description": "Increase density perception with hair simulation. A planned process for a natural and even look in Istanbul."
+      },
+      "hero": {
+        "kicker": "HAIR SIMULATION ISTANBUL",
+        "title": "Hair simulation",
+        "subtitle": "Hair Simulation supports the appearance of existing hair and aims for a fuller look by optimizing gap and density perception."
+      },
+      "suitableTitle": "Who is it suitable for?",
+      "suitableItems": {
+        "0": "Visible gaps caused by hair thinning",
+        "1": "Reduced density effect under bright light",
+        "2": "A goal of more natural and softer transitions"
+      },
+      "planningTitle": "Planning",
+      "planningText": "Before sessions, the target area is mapped. Density distribution is planned considering daily use scenarios and natural hair direction.",
+      "cta": "Contact us"
+    }
+  },
+  "Gallery": {
+    "meta": {
+      "title": "Gallery",
+      "description": "Before/after examples of SMP results. Learn more for a natural look in Istanbul."
+    },
+    "ariaLabel": "Before / after gallery",
+    "kicker": "BEFORE / AFTER",
+    "title": "How do results look?",
+    "subtitle": "Sample comparisons show how proper planning supports balanced and natural-looking outcomes.",
+    "before": "Before",
+    "after": "After",
+    "slider": {
+      "ariaLabel": "Before / after comparison",
+      "drag": "Drag",
+      "percentageLabel": "Comparison percentage"
+    }
+  },
+  "Blog": {
+    "meta": {
+      "title": "Blog",
+      "description": "Short and practical notes about SMP and aftercare."
+    },
+    "hero": {
+      "kicker": "BLOG",
+      "title": "Articles",
+      "subtitle": "Short and practical content about SMP process and aftercare."
+    },
+    "card": {
+      "read": "Read",
+      "readMore": "Read more",
+      "readingMinutesLabel": "min"
+    },
+    "post": {
+      "readingLabel": "min read"
+    }
+  },
+  "FAQ": {
+    "meta": {
+      "title": "FAQ",
+      "description": "Common questions and short answers about SMP (hair simulation)."
+    },
+    "hero": {
+      "kicker": "FAQ",
+      "title": "About SMP",
+      "subtitle": "Find quick answers about process, permanence, comfort, and aftercare."
+    },
+    "section": {
+      "ariaLabel": "Frequently asked questions",
+      "kicker": "FREQUENTLY ASKED QUESTIONS",
+      "title": "Answers to common questions",
+      "subtitle": "Quick and clear information about SMP and the process."
+    },
+    "items": {
+      "howLong": {
+        "question": "How long does the process take?",
+        "answer": "The first session usually takes around 2-4 hours. Session count depends on target area and density plan."
+      },
+      "permanent": {
+        "question": "Is SMP permanent?",
+        "answer": "SMP is designed for long-term results, but tone can fade over time. Many clients choose a refresh session when needed."
+      },
+      "pain": {
+        "question": "Is it painful?",
+        "answer": "Most clients describe the process as manageable. The experience can vary by skin sensitivity and target area."
+      },
+      "whoShould": {
+        "question": "Who is suitable for SMP?",
+        "answer": "Candidates include people with pattern hair loss, thinning, hairline concerns, or scar visibility. Suitability is assessed in consultation."
+      },
+      "afterCare": {
+        "question": "What about aftercare?",
+        "answer": "Following aftercare instructions is essential. Gentle cleansing and sun protection are usually key in early days."
+      }
+    }
+  },
+  "Contact": {
+    "meta": {
+      "title": "Contact",
+      "description": "Appointment request and fast contact for SMP in Istanbul."
+    },
+    "hero": {
+      "kicker": "CONTACT",
+      "title": "Leave a message, we will get back to you",
+      "subtitle": "Send your request through the form. You can also reach us directly on WhatsApp."
+    },
+    "quickInfo": {
+      "title": "Quick info",
+      "phone": "PHONE",
+      "email": "E-MAIL"
+    },
+    "location": {
+      "title": "Istanbul location",
+      "description": "Exact application location (sample) is shared after request. Directions are provided based on appointment plan.",
+      "mapPlaceholder": "Map (sample)"
+    },
+    "form": {
+      "heading": "Appointment Request",
+      "helperText": "Fill out the form for a free initial assessment in Istanbul.",
+      "submit": "Send Request",
+      "name": "Full Name",
+      "phone": "Phone",
+      "city": "City",
+      "hairLossType": "Hair loss type",
+      "date": "Preferred appointment date",
+      "message": "Message",
+      "select": "Select...",
+      "messagePlaceholder": "Briefly describe your condition and expectation.",
+      "contact": "Contact",
+      "sending": "Sending...",
+      "successBody": "You can also reach us quickly via WhatsApp.",
+      "errorTitle": "Error",
+      "networkError": "A network error occurred. Please try again or contact us via WhatsApp.",
+      "genericError": "Something went wrong. Please try again.",
+      "successMessage": "Thank you. We received your request and will contact you shortly.",
+      "hairLossOptions": {
+        "pattern": "Pattern hair loss",
+        "thinning": "Hair thinning",
+        "hairline": "Hairline correction",
+        "scar": "Scar softening",
+        "other": "Other"
+      }
+    },
+    "about": {
+      "meta": {
+        "title": "About",
+        "description": "Our premium SMP approach in Istanbul: minimal, professional, and focused on natural-looking planning."
+      },
+      "hero": {
+        "kicker": "ABOUT",
+        "title": "Minimal and professional approach",
+        "subtitle": "The process is handled holistically with tone/density planning, precise application, and aftercare guidance."
+      },
+      "howTitle": "How do we work?",
+      "cards": {
+        "0": {
+          "title": "Natural harmony",
+          "text": "Tone and density are planned in harmony with hair direction and skin tone."
+        },
+        "1": {
+          "title": "Clear process",
+          "text": "Expectations and steps are discussed transparently from the start."
+        },
+        "2": {
+          "title": "Aftercare focus",
+          "text": "With proper care during recovery, outcomes appear more balanced."
+        },
+        "3": {
+          "title": "Minimal aesthetics",
+          "text": "The goal is a premium and clean look without exaggeration."
+        }
+      },
+      "noteTitle": "Note",
+      "noteText": "Every skin type is different. For this reason, realistic goals are set during planning.",
+      "cta": "Contact us"
+    },
+    "whatsappAria": "Send message via WhatsApp"
+  },
+  "Navigation": {
+    "languageSwitcherAria": "Language switcher",
+    "istanbul": "Istanbul",
+    "home": "Home",
+    "simulation": "Hair Simulation",
+    "gallery": "Gallery",
+    "services": "Services",
+    "faq": "FAQ",
+    "blog": "Blog",
+    "contact": "Contact",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "closeMenuBackdrop": "Close menu (backdrop)",
+    "sendMessage": "Send Message",
+    "language": "Language",
+    "theme": "Theme",
+    "mobileMenu": "Mobile menu"
+  },
+  "Footer": {
+    "description": "Premium scalp micropigmentation in Istanbul. Contact us for a free initial assessment.",
+    "services": "Services",
+    "gallery": "Gallery",
+    "about": "About",
+    "faq": "FAQ",
+    "blog": "Blog",
+    "contact": "Contact",
+    "rights": "All rights reserved."
+  },
+  "Theme": {
+    "toggle": "Toggle theme",
+    "switchToLight": "Switch to light mode",
+    "switchToDark": "Switch to dark mode"
+  },
+  "Admin": {
+    "tabs": {
+      "appointments": "Appointments",
+      "reviews": "Reviews",
+      "posts": "Posts"
+    },
+    "refresh": "Refresh",
+    "loading": "Loading...",
+    "errors": {
+      "appointmentsLoad": "Failed to load appointments",
+      "load": "Load error"
+    },
+    "confirm": {
+      "delete": "Delete this item?",
+      "deletePost": "Delete this post?"
+    },
+    "actions": {
+      "approve": "Approve",
+      "reject": "Reject",
+      "hide": "Hide",
+      "delete": "Delete",
+      "save": "Save",
+      "cancel": "Cancel",
+      "edit": "Edit",
+      "publish": "Publish",
+      "unpublish": "Unpublish"
+    },
+    "status": {
+      "published": "Published",
+      "pending": "Pending",
+      "draft": "Draft"
+    },
+    "post": {
+      "newTitle": "New post",
+      "editTitle": "Edit post",
+      "title": "Title",
+      "slug": "Slug (a-z0-9-)",
+      "excerpt": "Excerpt",
+      "content": "Content"
+    }
+  }
+}

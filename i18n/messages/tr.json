@@ -1,0 +1,379 @@
+{
+  "meta": {
+    "locale": "tr"
+  },
+  "Home": {
+    "meta": {
+      "title": "Ana Sayfa",
+      "description": "İstanbul’da premium Scalp Micropigmentation. Saç simülasyonu ile doğal ve minimal görünüm hedefleyin."
+    },
+    "hero": {
+      "kicker": "İSTANBUL • SMP",
+      "title": "Doğal görünüm, minimal dokunuş",
+      "subtitle": "Saç simülasyonu (SMP) ile daha dengeli bir yoğunluk algısı. İstanbul’da premium ve profesyonel bir yaklaşım."
+    },
+    "cards": {
+      "simulation": {
+        "title": "Saç Simülasyonu",
+        "text": "Hacim algısını doğal şekilde güçlendiren planlı süreç."
+      },
+      "gallery": {
+        "title": "Galeri",
+        "text": "Örnek öncesi/sonrası karşılaştırmalarla sonuç hissi."
+      },
+      "services": {
+        "title": "Hizmetler",
+        "text": "Uygulama kapsamı, yaklaşım ve bakım detayları."
+      },
+      "explore": "İncele →"
+    },
+    "gallery": {
+      "ariaLabel": "Öncesi / sonrası önizleme",
+      "kicker": "ÖNCE / SONRA",
+      "title": "Doğal bir görünüm için planlama",
+      "subtitle": "SMP’de başarı; doğru yoğunluk ve pigment seçimiyle birlikte gelir.",
+      "sample": "Öncesi / Sonrası (örnek)"
+    },
+    "contact": {
+      "kicker": "İLETİŞİM",
+      "title": "Kısa bir mesaj bırakın",
+      "subtitle": "Durumunuzu ve hedefinizi yazın. İstanbul’da uygun zaman aralığına göre hızlıca dönüş yapalım.",
+      "whatToShare": "Ne paylaşmalısınız?",
+      "items": {
+        "cityPhone": "Şehir ve telefon",
+        "hairLossType": "Saç kaybı tipi",
+        "dateMessage": "Tercih edilen tarih ve kısa mesaj"
+      }
+    },
+    "form": {
+      "heading": "Randevu Talebi",
+      "helperText": "İstanbul’da ücretsiz ön değerlendirme için formu doldurun.",
+      "submit": "Randevu Talebi Gönder",
+      "name": "Ad Soyad",
+      "phone": "Telefon",
+      "city": "Şehir",
+      "hairLossType": "Saç kaybı tipi",
+      "date": "Tercih ettiğiniz randevu tarihi",
+      "message": "Mesaj",
+      "select": "Seçin...",
+      "messagePlaceholder": "Kısaca durumunuzu ve beklentinizi yazın.",
+      "contact": "İletişim",
+      "sending": "Gönderiliyor...",
+      "successBody": "Bu süreçte WhatsApp üzerinden hızlı dönüş alabilirsiniz.",
+      "errorTitle": "Hata",
+      "networkError": "Bağlantı hatası oluştu. Lütfen tekrar deneyin veya WhatsApp’tan mesaj bırakın.",
+      "genericError": "Bir hata oluştu. Lütfen tekrar deneyin.",
+      "successMessage": "Teşekkürler. Talebiniz alındı. En kısa sürede dönüş yapacağız.",
+      "hairLossOptions": {
+        "pattern": "Erkek tipi kellik",
+        "thinning": "Saç seyrelmesi",
+        "hairline": "Saç çizgisi düzeltme",
+        "scar": "İz kapama",
+        "other": "Diğer"
+      }
+    },
+    "blog": {
+      "kicker": "BLOG",
+      "title": "Kısa rehber yazıları",
+      "subtitle": "Süreç ve bakım hakkında kısa notlar.",
+      "cta": "Blogu keşfet"
+    },
+    "testimonials": {
+      "ariaLabel": "Müşteri yorumları",
+      "kicker": "MÜŞTERİ YORUMLARI",
+      "title": "Doğal görünüme giden yolda deneyimler",
+      "subtitle": "Gerçek müşterilerden; süreç, sonuç ve bakım hakkında kısa notlar.",
+      "ratingLabel": "{rating} yıldız"
+    }
+  },
+  "Services": {
+    "meta": {
+      "title": "Hizmetler",
+      "description": "İstanbul’da premium SMP (saç simülasyonu). Doğal görünüm için planlı uygulama, bakım ve yönlendirme."
+    },
+    "hero": {
+      "kicker": "HİZMETLER",
+      "title": "Hizmet kapsamı",
+      "subtitle": "Minimal, profesyonel ve doğal bir görünüm için planlı süreç."
+    },
+    "items": {
+      "smp": {
+        "title": "Saç simülasyonu (SMP)",
+        "description": "Yoğunluk algısını dengelemek için mikro pigment noktalarıyla planlı uygulama.",
+        "b1": "Doğal yoğunluk planı",
+        "b2": "Minimal ve premium görünüm",
+        "b3": "Bakım yönlendirmesi"
+      },
+      "thinning": {
+        "title": "Seyrelme desteği",
+        "description": "Mevcut saçla uyumlu ton/yoğunluk dağılımıyla daha homojen görünüm hedefi.",
+        "b1": "Ton uyumu",
+        "b2": "Yumuşak geçişler",
+        "b3": "Günlük kullanım odağı"
+      },
+      "scar": {
+        "title": "İz ve çizgi kamuflajı",
+        "description": "Belirli alanlarda daha dengeli bir görünüm için hassas haritalama.",
+        "b1": "Hassas haritalama",
+        "b2": "Doğal sınırlar",
+        "b3": "Kişiye özel planlama"
+      }
+    },
+    "contact": {
+      "title": "Randevu için",
+      "subtitle": "İletişim sayfasından kısa bir mesaj bırakabilirsiniz.",
+      "cta": "İletişime geç"
+    },
+    "simulation": {
+      "meta": {
+        "title": "Saç Simülasyonu İstanbul",
+        "description": "Saç simülasyonu ile hacim etkisini artırın. İstanbul’da doğal ve homojen görünüm için planlı süreç."
+      },
+      "hero": {
+        "kicker": "SAC SİMÜLASYONU ISTANBUL",
+        "title": "Saç simülasyonu",
+        "subtitle": "Sac Simulasyonu; mevcut saçların görünümünü destekler ve boşluk/hacim algısını optimize ederek daha dolu bir görünüm hedefler."
+      },
+      "suitableTitle": "Kimler için uygun?",
+      "suitableItems": {
+        "0": "Saç seyrelmesi nedeniyle boşlukların belirginleşmesi",
+        "1": "Işık altında hacim etkisinin azalması",
+        "2": "Daha doğal ve yumuşak geçiş hedefi"
+      },
+      "planningTitle": "Planlama",
+      "planningText": "Seans öncesinde hedef bölge haritalanır. Günlük kullanım senaryoları ve doğal saç yönü dikkate alınarak yoğunluk dağılımı planlanır.",
+      "cta": "İletişime geç"
+    }
+  },
+  "Gallery": {
+    "meta": {
+      "title": "Galeri",
+      "description": "SMP sonuçlarına örnek öncesi/sonrası karşılaştırmalar. İstanbul’da doğal görünüm için bilgi alın."
+    },
+    "ariaLabel": "Öncesi / sonrası galeri",
+    "kicker": "ÖNCE / SONRA",
+    "title": "Sonuçlar nasıl görünüyor?",
+    "subtitle": "Örnek karşılaştırmalar; renk oturması ve homojen görünüm için planlamanın önemini gösterir.",
+    "before": "Öncesi",
+    "after": "Sonrası",
+    "slider": {
+      "ariaLabel": "Öncesi / sonrası karşılaştırma",
+      "drag": "Sürükle",
+      "percentageLabel": "Karşılaştırma yüzdesi"
+    }
+  },
+  "Blog": {
+    "meta": {
+      "title": "Blog",
+      "description": "SMP (saç simülasyonu) ve bakım hakkında kısa, anlaşılır yazılar."
+    },
+    "hero": {
+      "kicker": "BLOG",
+      "title": "Yazılar",
+      "subtitle": "SMP süreci ve bakım hakkında kısa, anlaşılır içerikler."
+    },
+    "card": {
+      "read": "Oku",
+      "readMore": "Devamını oku",
+      "readingMinutesLabel": "dk"
+    },
+    "post": {
+      "readingLabel": "dk okuma"
+    }
+  },
+  "FAQ": {
+    "meta": {
+      "title": "SSS",
+      "description": "SMP (saç simülasyonu) hakkında sık sorulan sorular ve kısa cevaplar."
+    },
+    "hero": {
+      "kicker": "SSS",
+      "title": "SMP Hakkında",
+      "subtitle": "Süreç, kalıcılık, acı/anestezi ve bakım gibi konuların yanıtlarını burada bulabilirsiniz."
+    },
+    "section": {
+      "ariaLabel": "Sıkça sorulan sorular",
+      "kicker": "SIKÇA SORULAN SORULAR",
+      "title": "Aklınızdaki soruların cevapları",
+      "subtitle": "SMP ve süreç hakkında kısa ve net bilgiler."
+    },
+    "items": {
+      "howLong": {
+        "question": "Süreç ne kadar sürer?",
+        "answer": "İlk seans genelde 2-4 saat aralığındadır. Seans sayısı hedef alan ve yoğunluk planına göre belirlenir."
+      },
+      "permanent": {
+        "question": "SMP kalıcı mıdır?",
+        "answer": "SMP uzun vadeli görünüm için planlanır ancak zamanla ton açılabilir. Gerekli durumlarda tazeleme seansı uygulanabilir."
+      },
+      "pain": {
+        "question": "Acı verir mi?",
+        "answer": "Çoğu kişi süreci tolere edilebilir olarak tanımlar. Deneyim cilt hassasiyetine ve uygulama alanına göre değişebilir."
+      },
+      "whoShould": {
+        "question": "Kimler için uygundur?",
+        "answer": "Erkek tipi dökülme, seyrelme, saç çizgisi düzensizliği veya iz görünümü olan kişiler için uygun olabilir. Uygunluk değerlendirmesi görüşmede yapılır."
+      },
+      "afterCare": {
+        "question": "Bakım süreci nasıldır?",
+        "answer": "Bakım talimatlarına uymak önemlidir. İlk günlerde nazik temizlik ve güneşten korunma genellikle önceliklidir."
+      }
+    }
+  },
+  "Contact": {
+    "meta": {
+      "title": "İletişim",
+      "description": "İstanbul’da SMP için randevu talebi ve hızlı iletişim. WhatsApp’tan mesaj bırakabilirsiniz."
+    },
+    "hero": {
+      "kicker": "İLETİŞİM",
+      "title": "Mesaj bırakın, dönüş yapalım",
+      "subtitle": "Formdan talebinizi gönderin. WhatsApp’tan da doğrudan iletişime geçebilirsiniz."
+    },
+    "quickInfo": {
+      "title": "Hızlı bilgiler",
+      "phone": "TELEFON",
+      "email": "E-POSTA"
+    },
+    "location": {
+      "title": "İstanbul konum",
+      "description": "Uygulama lokasyonu (örnek) talep sonrası paylaşılır. Şehir içi randevu planına göre yönlendirme yapılır.",
+      "mapPlaceholder": "Harita (örnek)"
+    },
+    "form": {
+      "heading": "Randevu Talebi",
+      "helperText": "İstanbul’da ücretsiz ön değerlendirme için formu doldurun.",
+      "submit": "Randevu Talebi Gönder",
+      "name": "Ad Soyad",
+      "phone": "Telefon",
+      "city": "Şehir",
+      "hairLossType": "Saç kaybı tipi",
+      "date": "Tercih ettiğiniz randevu tarihi",
+      "message": "Mesaj",
+      "select": "Seçin...",
+      "messagePlaceholder": "Kısaca durumunuzu ve beklentinizi yazın.",
+      "contact": "İletişim",
+      "sending": "Gönderiliyor...",
+      "successBody": "Bu süreçte WhatsApp üzerinden hızlı dönüş alabilirsiniz.",
+      "errorTitle": "Hata",
+      "networkError": "Bağlantı hatası oluştu. Lütfen tekrar deneyin veya WhatsApp’tan mesaj bırakın.",
+      "genericError": "Bir hata oluştu. Lütfen tekrar deneyin.",
+      "successMessage": "Teşekkürler. Talebiniz alındı. En kısa sürede dönüş yapacağız.",
+      "hairLossOptions": {
+        "pattern": "Erkek tipi kellik",
+        "thinning": "Saç seyrelmesi",
+        "hairline": "Saç çizgisi düzeltme",
+        "scar": "İz kapama",
+        "other": "Diğer"
+      }
+    },
+    "about": {
+      "meta": {
+        "title": "Hakkımızda",
+        "description": "İstanbul’da premium SMP yaklaşımımız: minimal, profesyonel ve doğal görünüm odaklı planlama."
+      },
+      "hero": {
+        "kicker": "HAKKIMIZDA",
+        "title": "Minimal ve profesyonel yaklaşım",
+        "subtitle": "Süreç; ton/yoğunluk planı, hassas uygulama ve bakım yönlendirmesiyle bütün olarak ele alınır."
+      },
+      "howTitle": "Nasıl çalışıyoruz?",
+      "cards": {
+        "0": {
+          "title": "Doğal uyum",
+          "text": "Ton ve yoğunluk, saç yönü ve cilt tonu ile uyumlu planlanır."
+        },
+        "1": {
+          "title": "Net süreç",
+          "text": "Beklentiler ve adımlar baştan şeffaf biçimde konuşulur."
+        },
+        "2": {
+          "title": "Bakım odağı",
+          "text": "İyileşme döneminde doğru bakım ile sonuç daha dengeli görünür."
+        },
+        "3": {
+          "title": "Minimal estetik",
+          "text": "Abartıdan uzak, premium ve temiz bir görünüm hedeflenir."
+        }
+      },
+      "noteTitle": "Not",
+      "noteText": "Her cilt farklıdır. Bu nedenle planlama aşamasında gerçekçi hedefler belirlenir.",
+      "cta": "İletişime geç"
+    },
+    "whatsappAria": "WhatsApp üzerinden mesaj gönder"
+  },
+  "Navigation": {
+    "languageSwitcherAria": "Dil seçici",
+    "istanbul": "İstanbul",
+    "home": "Ana Sayfa",
+    "simulation": "Saç Simülasyonu",
+    "gallery": "Galeri",
+    "services": "Hizmetler",
+    "faq": "SSS",
+    "blog": "Blog",
+    "contact": "İletişim",
+    "openMenu": "Menüyü aç",
+    "closeMenu": "Menüyü kapat",
+    "closeMenuBackdrop": "Menüyü kapat (arka plan)",
+    "sendMessage": "Mesaj Gönder",
+    "language": "Dil",
+    "theme": "Tema",
+    "mobileMenu": "Mobil menü"
+  },
+  "Footer": {
+    "description": "İstanbul’da Scalp Micropigmentation ile doğal saç görünümü. Randevu alıp ücretsiz ön değerlendirme yaptırabilirsiniz.",
+    "services": "Hizmetler",
+    "gallery": "Galeri",
+    "about": "Hakkımızda",
+    "faq": "SSS",
+    "blog": "Blog",
+    "contact": "İletişim",
+    "rights": "Tüm hakları saklıdır."
+  },
+  "Theme": {
+    "toggle": "Tema değiştir",
+    "switchToLight": "Açık moda geç",
+    "switchToDark": "Koyu moda geç"
+  },
+  "Admin": {
+    "tabs": {
+      "appointments": "Randevular",
+      "reviews": "Yorumlar",
+      "posts": "Yazılar"
+    },
+    "refresh": "Yenile",
+    "loading": "Yükleniyor…",
+    "errors": {
+      "appointmentsLoad": "Randevular yüklenemedi",
+      "load": "Yükleme hatası"
+    },
+    "confirm": {
+      "delete": "Silinsin mi?",
+      "deletePost": "Yazı silinsin mi?"
+    },
+    "actions": {
+      "approve": "Onayla",
+      "reject": "Reddet",
+      "hide": "Gizle",
+      "delete": "Sil",
+      "save": "Kaydet",
+      "cancel": "İptal",
+      "edit": "Düzenle",
+      "publish": "Yayınla",
+      "unpublish": "Yayından kaldır"
+    },
+    "status": {
+      "published": "Yayında",
+      "pending": "Beklemede",
+      "draft": "Taslak"
+    },
+    "post": {
+      "newTitle": "Yeni yazı",
+      "editTitle": "Yazıyı düzenle",
+      "title": "Başlık",
+      "slug": "Slug (a-z0-9-)",
+      "excerpt": "Özet",
+      "content": "İçerik"
+    }
+  }
+}

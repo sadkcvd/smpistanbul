@@ -1,8 +1,77 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  /* =========================================
+     LIGHT MODE
+     ========================================= */
+
+  /* Main surfaces */
+  --background: #FAFAF9;
+  --background-secondary: #F3F3F1;
+  --surface: #FFFFFF;
+  --surface-muted: #EAEAE7;
+
+  /* Main text */
   --foreground: #171717;
+  --foreground-secondary: #404040;
+  --foreground-muted: #525252;
+
+  /* Brand */
+  --primary: #111111;
+
+  /* Gold - BRAND / DECORATION */
+  --brand-accent: #8A6500;
+  --secondary-gold: #8A6500;
+
+  /* CTA */
+  --cta-gold: #8A6500;
+  --cta-gold-hover: #6F5100;
+  --text-on-cta: #FFFFFF;
+
+  /* WhatsApp */
+  --cta-wp: #16803A;
+  --cta-wp-hover: #116B30;
+
+  /* Borders */
+  --border: #D4D4D0;
+  --border-strong: #A3A3A0;
+}
+
+.dark {
+  /* =========================================
+     DARK MODE
+     ========================================= */
+
+  /* Main surfaces */
+  --background: #0D0D0D;
+  --background-secondary: #171717;
+  --surface: #1C1C1C;
+  --surface-muted: #262626;
+
+  /* Main text */
+  --foreground: #F5F5F5;
+  --foreground-secondary: #D4D4D4;
+  --foreground-muted: #A3A3A3;
+
+  /* Brand */
+  --primary: #F5F5F5;
+
+  /* Gold */
+  --brand-accent: #E5B93F;
+  --secondary-gold: #E5B93F;
+
+  /* CTA */
+  --cta-gold: #E5B93F;
+  --cta-gold-hover: #F0CC63;
+  --text-on-cta: #000000;
+
+  /* WhatsApp */
+  --cta-wp: #39D879;
+  --cta-wp-hover: #50E48A;
+
+  /* Borders */
+  --border: #404040;
+  --border-strong: #666666;
 }
 
 @theme inline {
@@ -12,15 +81,30 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
 }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 96px;
+}
+
+a {
+  /* color: var(--foreground); */
+  text-decoration: none;
+}
+
+/* Keep anchor targets visible under sticky header */
+[id] {
+  scroll-margin-top: 96px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
