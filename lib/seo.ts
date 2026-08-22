@@ -21,7 +21,7 @@ export function buildMetadata({ title, description, path, robots }: SeoArgs): Me
 
   const pageTitle = `${title} | ${siteConfig.shortName}`;
 
-  const ogImageUrl = joinUrl(siteConfig.url, "/images/og/default.jpeg");
+  const ogImageUrl = joinUrl(siteConfig.url, "/images/og/logo.png");
 
   return {
     metadataBase: new URL(siteConfig.url),

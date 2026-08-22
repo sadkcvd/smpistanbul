@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useTranslations } from "next-intl";
@@ -9,7 +10,6 @@ import { MobileNav } from "@/components/site/MobileNav";
 import { LanguageSwitcher } from "@/components/site/LanguageSwitcher";
 import { ThemeToggle } from "@/components/theme/ThemeToggle";
 
-import { siteConfig } from "@/lib/site";
 import { localizedPath, localeFromPathname } from "@/lib/i18n";
 import { navItems } from "@/lib/navigation";
 
@@ -21,26 +21,22 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 border-b border-foreground/10 bg-background/90 backdrop-blur">
       <Container>
-        <div className="flex min-w-0 items-center justify-between gap-3 py-4 sm:py-5">
+        <div className="flex min-w-0 items-center justify-between gap-3 py-3 sm:py-4">
+
           {/* Logo */}
           <Link
             href={localizedPath("/", locale)}
-            className="flex min-w-0 shrink items-center gap-3"
+            aria-label="SMP İstanbul ana sayfa"
+            className="flex shrink-0 items-center"
           >
-            <div
-              aria-hidden="true"
-              className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-foreground/5"
-            >
-              <span className="text-sm font-black text-foreground">
-                SMP
-              </span>
-            </div>
-
-            <div className="min-w-0 leading-tight">
-              <div className="truncate text-sm font-black text-foreground">
-                {siteConfig.name}
-              </div>
-            </div>
+            <Image
+              src="/images/logo.png"
+              alt="SMP İstanbul"
+              width={100}
+              height={30}
+              priority
+            /*   className="h-auto w-[120px] sm:w-[145px]" */
+            />
           </Link>
 
           {/* Desktop Navigation */}
@@ -70,6 +66,7 @@ export function SiteHeader() {
           <div className="shrink-0 lg:hidden">
             <MobileNav />
           </div>
+
         </div>
       </Container>
     </header>
