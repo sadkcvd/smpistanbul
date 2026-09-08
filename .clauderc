@@ -1,0 +1,11 @@
+{
+  "projectDescription": "smp-website: Next.js 16 (App Router), React 19, TypeScript ve Prisma ORM kullanan modern bir web projesi.",
+  "rules": [
+    "Next.js 16 ve React 19 kurallarına (Server/Client Component ayrımı) kesinlikle uyun.",
+    "Form yönetiminde react-hook-form ve validation için zod çiftini kullanın.",
+    "Bileşenleri (components) ve hooks yapılarını ortak mimariye sadık kalarak yazın.",
+    "Veritabanı şeması değişikliklerinde her zaman 'prisma generate' ve 'prisma migrate dev' süreçlerini işletin.",
+    "Dosya silme veya köklü mimari refactor öncesinde mutlaka kullanıcıdan terminal üzerinden onay isteyin.",
+    "Kod yazıldıktan sonra 'npm run lint' komutunu çalıştırarak statik analiz hatalarını giderin."
+  ]
+}
