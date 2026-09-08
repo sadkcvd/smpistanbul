@@ -1,11 +1,48 @@
 {
-  "projectDescription": "smp-website: Next.js 16 (App Router), React 19, TypeScript ve Prisma ORM kullanan modern bir web projesi.",
-  "rules": [
-    "Next.js 16 ve React 19 kurallarına (Server/Client Component ayrımı) kesinlikle uyun.",
-    "Form yönetiminde react-hook-form ve validation için zod çiftini kullanın.",
-    "Bileşenleri (components) ve hooks yapılarını ortak mimariye sadık kalarak yazın.",
-    "Veritabanı şeması değişikliklerinde her zaman 'prisma generate' ve 'prisma migrate dev' süreçlerini işletin.",
-    "Dosya silme veya köklü mimari refactor öncesinde mutlaka kullanıcıdan terminal üzerinden onay isteyin.",
-    "Kod yazıldıktan sonra 'npm run lint' komutunu çalıştırarak statik analiz hatalarını giderin."
+"projectDescription": "smp-website: Next.js 16.2 App Router, React 19, TypeScript, Tailwind CSS v4, Radix UI, Prisma, PostgreSQL, Zod, React Hook Form, TanStack React Query v5 ve next-intl kullanan modern bir web projesidir.",
+
+"rules": [
+"Kod yazmadan veya mevcut kod hakkında kesin bir değerlendirme yapmadan önce ilgili dosyaları oku. Açılmamış dosyalar hakkında varsayım yapma.",
+
+"Next.js 16.2 kullanıldığı için Next.js ile ilgili kod yazmadan önce mümkün olduğunda node_modules/next/dist/docs/ içerisindeki ilgili güncel dokümantasyonu kontrol et.",
+
+"Server Components varsayılandır. 'use client' yalnızca gerçekten client-side state, event handler veya browser API'si gerektiğinde kullanılmalıdır.",
+
+"Herhangi bir dosyayı değiştirmeden önce mevcut implementasyonu ve ilgili bağımlılıkları analiz et.",
+
+"İzin verilmedikçe tek bir işlemde 3'ten fazla dosyayı değiştirme.",
+
+"Büyük refactor, mimari değişiklik, SEO çalışması veya birden fazla dosyayı etkileyen kapsamlı değişikliklerden önce /plan kullan ve kullanıcı onayı bekle.",
+
+"Kullanıcı açıkça istemediği sürece mevcut çalışan kodu refactor etme, yeni feature ekleme veya kapsamı genişletme.",
+
+"Over-engineering yapma. İstenen problemi çözmek için gereken en küçük ve sürdürülebilir çözümü tercih et.",
+
+"Asla any tipi kullanma. TypeScript kodu mümkün olduğunca sıkı tip güvenliğiyle yazılmalıdır.",
+
+"Kullanıcı girdileri, API payloadları ve dış kaynaklardan gelen veriler Zod ile runtime validation'dan geçirilmelidir.",
+
+"Formlarda react-hook-form, @hookform/resolvers ve Zod kombinasyonunu kullan.",
+
+"Yeni bir npm paketi yüklemeden önce package.json dosyasını kontrol et ve mevcut dependency'lerin yeterli olup olmadığını değerlendir.",
+
+"Prisma schema değişikliklerinde kullanıcı onayı olmadan prisma migrate çalıştırma.",
+
+"Prisma schema değişikliği kullanıcı tarafından onaylandıktan sonra gerekli migration ve prisma generate işlemlerini çalıştır.",
+
+"Database üzerinde veri kaybına yol açabilecek işlemler için özellikle dikkatli davran ve kullanıcı onayı olmadan destructive migration çalıştırma.",
+
+"Kod değişikliklerinden sonra mümkün olduğunda npm run lint ve npm run build çalıştırarak değişiklikleri doğrula.",
+
+"Geçici test veya yardımcı dosyalar oluşturulursa görev tamamlandığında bunları temizle.",
+
+"Bir hata çözerken yalnızca ilgili problemi düzelt. İlgisiz dosyalara, componentlere veya mimariye dokunma.",
+
+"SEO veya metadata değişikliklerinde Next.js 16 Metadata API kurallarına uy ve mevcut internationalization yapısını koru.",
+
+"next-intl kullanılan alanlarda mevcut locale, routing ve translation namespace yapısını bozmadan ilerle.",
+
+"Değişiklik yapmadan önce mevcut proje mimarisine uyumlu en küçük uygulanabilir çözümü tercih et."
+
   ]
 }
