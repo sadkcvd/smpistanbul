@@ -24,6 +24,12 @@ export function MobileNav() {
 
   const t = useTranslations("Navigation");
 
+  const [prevPathname, setPrevPathname] = React.useState(pathname);
+  if (pathname !== prevPathname) {
+    setPrevPathname(pathname);
+    setOpen(false);
+  }
+
   React.useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
 
@@ -31,10 +37,6 @@ export function MobileNav() {
       document.body.style.overflow = "";
     };
   }, [open]);
-
-  React.useEffect(() => {
-    setOpen(false);
-  }, [pathname]);
 
   React.useEffect(() => {
     if (!open) return;
@@ -69,7 +71,7 @@ export function MobileNav() {
       <AnimatePresence>
         {open && (
           <motion.div
-            className="fixed inset-0 z-[70]"
+            className="fixed inset-0 z-70"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -89,7 +91,7 @@ export function MobileNav() {
             <motion.aside
               className="
                 absolute right-0 top-0
-                flex h-[100dvh]
+                flex h-dvh
                 w-[min(88vw,360px)]
                 flex-col
                 overflow-hidden
@@ -210,7 +212,7 @@ export function MobileNav() {
                       hover:opacity-90
                       focus-visible:outline-none
                       focus-visible:ring-2
-                      focus-visible:ring-[var(--brand-accent)]
+                      focus-visible:ring-(--brand-accent)
                     "
                   >
                     {t("sendMessage")}

@@ -19,7 +19,6 @@ export function localizedPath(path: string, locale: Locale): string {
 
 export function switchLocalePath(pathname: string, targetLocale: Locale): string {
   const segments = pathname.split("/").filter(Boolean);
-  const currentLocale = normalizeLocale(segments[0]);
   const hasLocalePrefix = segments.length > 0 && (segments[0] === "tr" || segments[0] === "en");
   const rest = hasLocalePrefix ? segments.slice(1) : segments;
   const normalized = `/${rest.join("/")}`.replace(/\/+$/, "") || "/";

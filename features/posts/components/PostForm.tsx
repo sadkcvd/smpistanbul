@@ -2,11 +2,19 @@
 
 import * as React from "react";
 
+import { Post } from "../posts.types";
+
+type PostFormProps = {
+  initial: Post | null;
+  onSubmit: (data: Partial<Post>) => void;
+  onCancel: () => void;
+};
+
 export function PostForm({
   initial,
   onSubmit,
   onCancel,
-}: any) {
+}: PostFormProps) {
   const [title, setTitle] = React.useState(initial?.title ?? "");
   const [slug, setSlug] = React.useState(initial?.slug ?? "");
   const [excerpt, setExcerpt] = React.useState(initial?.excerpt ?? "");

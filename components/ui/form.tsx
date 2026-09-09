@@ -7,6 +7,7 @@ import {
   useFormContext,
   type FieldValues,
   type ControllerProps,
+  type UseFormReturn,
 } from "react-hook-form";
 import { cn } from "@/lib/utils";
 import { Label } from "./label";
@@ -17,7 +18,7 @@ export function Form({
   onSubmit,
   ...props
 }: React.PropsWithChildren<{
-  form: any;
+  form: UseFormReturn<FieldValues>;
   onSubmit: (values: FieldValues) => unknown;
 } & React.ComponentProps<"form">>) {
   return (

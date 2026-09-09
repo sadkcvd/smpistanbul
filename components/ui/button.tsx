@@ -47,7 +47,7 @@ export function Button({
   asChild,
   ...props
 }: ButtonProps) {
-  const Comp = (asChild ? Slot : "button") as any;
+  const Comp: React.ElementType = asChild ? Slot : "button";
 
   return (
     <Comp

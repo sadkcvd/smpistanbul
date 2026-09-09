@@ -15,8 +15,6 @@ export function AppointmentCard({
   onDelete,
 }: Props) {
   const isPending = appointment.status === "pending";
-  const isApproved = appointment.status === "approved";
-  const isRejected = appointment.status === "rejected";
 
   const statusStyle = {
     pending: "text-yellow-600 bg-yellow-50",

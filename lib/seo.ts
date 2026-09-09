@@ -1,4 +1,4 @@
-import type { Metadata, ResolvingMetadata } from "next";
+import type { Metadata } from "next";
 import { siteConfig } from "./site";
 
 type SeoArgs = {
@@ -61,10 +61,7 @@ export function buildMetadata({ title, description, path, robots }: SeoArgs): Me
 }
 
 // Convenience export for pages that need resolving metadata.
-export async function defaultGenerateMetadata(
-  args: SeoArgs,
-  _parent: ResolvingMetadata
-): Promise<Metadata> {
+export async function defaultGenerateMetadata(args: SeoArgs): Promise<Metadata> {
   return buildMetadata(args);
 }
 

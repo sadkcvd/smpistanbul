@@ -1,7 +1,6 @@
 import { appointmentRepo } from "./appointment.repo";
 import { appointmentRequestSchema } from "@/lib/validation/appointment";
-
-const validStatuses = ["pending", "approved", "rejected"] as const;
+import { AppointmentStatus } from "./appointment.types";
 
 export const appointmentService = {
   async create(input: unknown) {
@@ -30,7 +29,7 @@ export const appointmentService = {
     return appointmentRepo.findAll();
   },
 
-  updateStatus(id: string, status: (typeof validStatuses)[number]) {
+  updateStatus(id: string, status: AppointmentStatus) {
     return appointmentRepo.updateStatus(id, status);
   },
 
