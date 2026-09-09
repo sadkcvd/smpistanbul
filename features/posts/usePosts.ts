@@ -34,7 +34,8 @@ export function usePosts() {
   });
 
   const update = useMutation({
-    mutationFn: ({ id, data }: any) => updatePost(id, data),
+    mutationFn: ({ id, data }: { id: string; data: Partial<Post> }) =>
+      updatePost(id, data),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["posts"] });
     },
@@ -52,8 +53,8 @@ export function usePosts() {
     isLoading: query.isLoading,
     error: query.error,
 
-    create: (data: any) => create.mutate(data),
-    update: (id: string, data: any) => update.mutate({ id, data }),
+    create: (data: Partial<Post>) => create.mutate(data),
+    update: (id: string, data: Partial<Post>) => update.mutate({ id, data }),
     remove: (id: string) => remove.mutate(id),
   };
 }

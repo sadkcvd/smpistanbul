@@ -13,6 +13,7 @@ import { ReviewFilters } from "@/features/reviews/components/ReviewFilters";
 import { usePosts } from "@/features/posts/usePosts";
 import { PostTable } from "@/features/posts/components/PostTable";
 import { PostForm } from "@/features/posts/components/PostForm";
+import { Post } from "@/features/posts/posts.types";
 
 type Tab = "appointments" | "reviews" | "posts";
 
@@ -24,8 +25,6 @@ export function AdminDashboard() {
    */
   const {
     appointments,
-    isLoading: appointmentsLoading,
-    error: appointmentsError,
     updateStatus,
     remove,
     search,
@@ -39,8 +38,6 @@ export function AdminDashboard() {
    */
   const {
     reviews,
-    isLoading: reviewsLoading,
-    error: reviewsError,
     search: reviewSearch,
     setSearch: setReviewSearch,
     filter,
@@ -55,13 +52,12 @@ export function AdminDashboard() {
    */
   const {
     posts,
-    isLoading: postsLoading,
     create,
     update,
     remove: removePost,
   } = usePosts();
 
-  const [editingPost, setEditingPost] = React.useState<any>(null);
+  const [editingPost, setEditingPost] = React.useState<Post | null>(null);
 
   /**
    * =========================
@@ -141,10 +137,10 @@ export function AdminDashboard() {
     <div className="min-h-screen bg-gray-50">
 
       {/* CONTAINER */}
-      <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8 py-6 space-y-6">
+      <div className="mx-auto w-full max-w-360 px-4 sm:px-6 lg:px-8 py-6 space-y-6">
 
         {/* HEADER */}
-        <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm min-h-[200px]">
+        <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm min-h-50">
 
           <h1 className="text-2xl font-bold text-gray-900">
             Yönetim Paneli
@@ -197,7 +193,7 @@ export function AdminDashboard() {
         </div>
 
         {/* CONTENT */}
-        <div className="relative min-h-[800px]">
+        <div className="relative min-h-200">
 
           {/* APPOINTMENTS */}
           <div className={tab === "appointments" ? "block space-y-4" : "hidden"}>
@@ -237,7 +233,7 @@ export function AdminDashboard() {
           <div className={tab === "posts" ? "block space-y-6" : "hidden"}>
             <PostForm
               initial={editingPost}
-              onSubmit={(data: any) => {
+              onSubmit={(data: Partial<Post>) => {
                 if (editingPost) update(editingPost.id, data);
                 else create(data);
                 setEditingPost(null);
@@ -249,7 +245,7 @@ export function AdminDashboard() {
               data={posts}
               onEdit={setEditingPost}
               onDelete={removePost}
-              onTogglePublish={(p: any) =>
+              onTogglePublish={(p: Post) =>
                 update(p.id, { published: !p.published })
               }
             />

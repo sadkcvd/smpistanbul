@@ -39,8 +39,6 @@ export function BeforeAfterSlider({
     setPercent(pct);
   }, []);
 
-  const MotionDiv = motion.div as any;
-
   return (
     <section aria-label={label ?? t("slider.ariaLabel")}>
       <div
@@ -67,7 +65,7 @@ export function BeforeAfterSlider({
           />
 
           {/* AFTER */}
-          <MotionDiv
+          <motion.div
             className="absolute inset-0"
             style={{
               clipPath: `inset(0 ${100 - percent}% 0 0)`,
@@ -82,7 +80,7 @@ export function BeforeAfterSlider({
               loading="eager"
               sizes="(max-width: 768px) 100vw, 702px"
             />
-          </MotionDiv>
+          </motion.div>
 
           {/* Handle */}
           <div

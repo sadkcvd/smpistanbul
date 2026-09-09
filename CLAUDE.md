@@ -256,3 +256,42 @@ npm run build
 npm run lint
 npm run prisma:generate
 npm run prisma:migrate
+```
+
+---
+
+## Proje İlerleme Durumu
+
+> Bu bölüm, projede tamamlanan teknik borç temizliği çalışmalarının özetini tutar. Kronolojik olarak güncellenir.
+
+### 2026-09-09 — TypeScript / ESLint / Tailwind v4 Temizliği
+
+**Kapsam:** Tüm proje genelinde `tsc --noEmit` ve `npm run lint` çıktısı sıfır hata/uyarıya indirildi; `MobileNav.tsx`, `AdminDashboard.tsx` ve `TestimonialsSection.tsx` dosyalarında Tailwind v4 kanonik sınıf adlandırmasına geçildi.
+
+**1. `@typescript-eslint/no-explicit-any` (11 hata → 0):**
+- `AdminDashboard.tsx`, `PostForm.tsx`, `usePosts.ts`: `any` yerine mevcut `Post` / `Partial<Post>` tipleri kullanıldı.
+- `BeforeAfterSlider.tsx`: `motion.div as any` kaldırıldı, `motion.div` doğrudan kullanıldı.
+- `button.tsx`: `Comp` değişkeni `React.ElementType` olarak tiplendi.
+- `form.tsx`: `form: any` → `form: UseFormReturn<FieldValues>`.
+- `ReviewFilters.tsx`: yerel `ReviewFilter` union tipi tanımlandı, `<select>` `onChange`'inde `as ReviewFilter` cast'i eklendi (native `string` → union narrowing için).
+- `appointment.service.ts`: yerel `validStatuses as const` yerine mevcut `AppointmentStatus` tipi kullanıldı.
+
+**2. `react-hooks/set-state-in-effect` (2 hata → 0):**
+- `MobileNav.tsx`: `pathname` değişince `setOpen(false)` çağıran `useEffect` kaldırıldı; render sırasında `prevPathname` karşılaştırmasıyla state güncelleniyor.
+- `ThemeToggle.tsx`: mount tespiti için `useEffect(() => setMounted(true), [])` yerine `React.useSyncExternalStore` (efektsiz SSR-guard pattern) kullanıldı.
+
+**3. `@typescript-eslint/no-unused-vars` (11 uyarı → 0):**
+- `AdminDashboard.tsx`: kullanılmayan `isLoading`/`error` destructure alias'ları kaldırıldı.
+- `AppointmentCard.tsx`: kullanılmayan `isApproved`/`isRejected` değişkenleri kaldırıldı.
+- `TestimonialsSection.tsx`: kullanılmayan `Locale` type import'u kaldırıldı.
+- `lib/i18n.ts`: kullanılmayan `currentLocale` değişkeni kaldırıldı.
+- `lib/seo.ts`: kullanılmayan `_parent: ResolvingMetadata` parametresi ve import'u kaldırıldı (`defaultGenerateMetadata` tek parametreli hale getirildi).
+
+**4. Tailwind v4 kanonik sınıf adlandırması:**
+- `MobileNav.tsx`: `z-[70]` → `z-70`, `h-[100dvh]` → `h-dvh`, `focus-visible:ring-[var(--brand-accent)]` → `focus-visible:ring-(--brand-accent)`.
+- `AdminDashboard.tsx`: `max-w-[1440px]` → `max-w-360`, `min-h-[200px]` → `min-h-50`, `min-h-[800px]` → `min-h-200`.
+- `TestimonialsSection.tsx`: `[var(--x)]` içerikli 15 sınıf; `@theme inline` içinde token olarak tanımlı olanlar bare isimlere (`bg-background`, `text-foreground`), diğerleri (`--brand-accent`, `--surface`, `--border`, `--foreground-secondary`) Tailwind v4'ün `(--var-adı)` kısayoluna çevrildi.
+
+**Doğrulama:** `npx tsc --noEmit` → 0 hata, `npm run lint` → 0 hata/0 uyarı, `npm run build` → 34/34 statik sayfa başarıyla oluşturuldu.
+
+**Not:** `Next.js 16 uyumluluk taraması` sırasında `middleware.ts → proxy.ts` geçişinin projede zaten uygulanmış olduğu ve `layout.tsx`/`lib/seo.ts` içindeki metadata yapısının (`metadataBase`, `openGraph`, `twitter`, `robots`, `alternates`) güncel Next.js 16 Metadata API'siyle uyumlu olduğu teyit edildi; bu alanlarda değişiklik gerekmedi.

@@ -2,12 +2,21 @@
 
 import { Input } from "@/components/ui/input";
 
+type ReviewFilter = "all" | "approved" | "pending";
+
+type ReviewFiltersProps = {
+  search: string;
+  setSearch: (value: string) => void;
+  filter: ReviewFilter;
+  setFilter: (value: ReviewFilter) => void;
+};
+
 export function ReviewFilters({
   search,
   setSearch,
   filter,
   setFilter,
-}: any) {
+}: ReviewFiltersProps) {
   return (
     <div className="flex gap-3 bg-white border rounded-xl p-4">
       <Input
@@ -19,7 +28,7 @@ export function ReviewFilters({
       <select
         className="border rounded-md px-3 text-sm"
         value={filter}
-        onChange={(e) => setFilter(e.target.value)}
+        onChange={(e) => setFilter(e.target.value as ReviewFilter)}
       >
         <option value="all">Tümü</option>
         <option value="approved">Onaylı</option>
