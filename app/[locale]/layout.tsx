@@ -8,6 +8,7 @@ import { routing } from "@/i18n/routing";
 import { SiteHeader } from "@/components/site/SiteHeader";
 import { SiteFooter } from "@/components/site/SiteFooter";
 import { WhatsAppFloatingButton } from "@/components/site/WhatsAppFloatingButton";
+import { PageTransition } from "@/components/site/PageTransition";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -31,7 +32,9 @@ export default async function LocaleLayout({
   return (
       <NextIntlClientProvider>
         <SiteHeader />
-        <main className="flex-1">{children}</main>
+        <main className="flex-1">
+          <PageTransition>{children}</PageTransition>
+        </main>
         <SiteFooter />
         <WhatsAppFloatingButton />
       </NextIntlClientProvider>

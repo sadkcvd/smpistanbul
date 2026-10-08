@@ -4,22 +4,22 @@ import { Slot } from "@radix-ui/react-slot";
 import { cn } from "@/lib/utils";
 
 export const buttonVariants = cva(
-  "inline-flex items-center justify-center rounded-full text-sm font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-60 ring-offset-background",
+  "inline-flex items-center justify-center rounded-full text-sm font-semibold tracking-wide transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-60 ring-offset-background",
   {
     variants: {
       variant: {
         default:
-          "bg-[var(--primary)] text-[#f5f5f5] hover:bg-black focus-visible:ring-[var(--primary)]/40",
+          "bg-(--primary) text-background shadow-sm shadow-black/10 hover:opacity-90 focus-visible:ring-(--primary)/40",
         secondary:
-          "bg-white text-[var(--secondary-gold)] ring-1 ring-inset ring-[var(--secondary-gold)]/45 hover:bg-[var(--secondary-gold)]/10 focus-visible:ring-[var(--secondary-gold)]/45",
+          "bg-(--surface) text-(--secondary-gold) ring-1 ring-inset ring-(--secondary-gold)/45 hover:bg-(--secondary-gold)/10 focus-visible:ring-(--secondary-gold)/45",
         accent:
-          "bg-[var(--cta-gold)] text-[#062312] hover:bg-[var(--cta-gold-hover)] focus-visible:ring-[var(--cta-gold)]/45 ring-1 ring-inset ring-black/10",
-          wp: 
-          "bg-[var(--cta-wp)] text-[#062312] hover:bg-[var(--cta-wp-hover)] focus-visible:ring-[var(--cta-wp)]/45 ring-1 ring-inset ring-black/10",
+          "bg-(--cta-gold) text-(--text-on-cta) shadow-sm shadow-black/10 hover:bg-(--cta-gold-hover) focus-visible:ring-(--cta-gold)/45 ring-1 ring-inset ring-(--border)",
+        wp:
+          "bg-(--cta-wp) text-[#062312] hover:bg-(--cta-wp-hover) focus-visible:ring-(--cta-wp)/45 ring-1 ring-inset ring-black/10",
         outline:
-          "bg-transparent dark:text-[var(--primary)] light:text-[var(--primary)] ring-1 ring-inset light:ring-black/10 dark:ring-white/10 hover:bg-black/5 focus-visible:ring-black/35",
+          "bg-transparent text-(--primary) ring-1 ring-inset ring-(--border) hover:bg-foreground/5 focus-visible:ring-(--border-strong)",
         ghost:
-          "bg-transparent text-[var(--primary)] hover:bg-black/5 focus-visible:ring-black/35",
+          "bg-transparent text-(--primary) hover:bg-foreground/5 focus-visible:ring-(--border-strong)",
       },
       size: {
         sm: "h-10 px-4",

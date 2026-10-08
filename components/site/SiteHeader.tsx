@@ -1,11 +1,11 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useTranslations } from "next-intl";
 
 import { Container } from "@/components/site/Container";
+import { Logo } from "@/components/site/Logo";
 import { MobileNav } from "@/components/site/MobileNav";
 import { LanguageSwitcher } from "@/components/site/LanguageSwitcher";
 import { ThemeToggle } from "@/components/theme/ThemeToggle";
@@ -19,7 +19,7 @@ export function SiteHeader() {
   const t = useTranslations("Navigation");
 
   return (
-    <header className="sticky top-0 z-40 border-b border-foreground/10 bg-background/90 backdrop-blur">
+    <header className="sticky top-0 z-40 border-b border-(--border) bg-(--surface)/90 backdrop-blur">
       <Container>
         <div className="flex min-w-0 items-center justify-between gap-3 py-3 sm:py-4">
 
@@ -29,14 +29,7 @@ export function SiteHeader() {
             aria-label="SMP İstanbul Ana Sayfa"
             className="flex shrink-0 items-center"
           >
-            <Image
-              src="/images/logo.png"
-              alt="SMP İstanbul"
-              width={100}
-              height={40}
-              priority
-              className="h-auto"
-            />
+            <Logo />
           </Link>
 
           {/* Desktop Navigation */}

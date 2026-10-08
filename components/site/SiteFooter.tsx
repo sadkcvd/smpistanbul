@@ -15,7 +15,7 @@ export function SiteFooter() {
   const t = useTranslations("Footer");
 
   return (
-    <footer className="mt-16 border-t light:border-black/10 dark:border-white/10 light:bg-white dark:bg-black">
+    <footer className="mt-16 border-t border-(--border) bg-(--background-secondary)">
       <Container>
         <div className="grid gap-8 py-12 md:grid-cols-3">
           <div className="space-y-3">
@@ -35,7 +35,7 @@ export function SiteFooter() {
               <Link
                 key={href}
                 href={localizedPath(href, locale)}
-                className="rounded-xl px-2 py-1 text-sm font-semibold text-foreground/80 hover:bg-black/5 hover:text-foreground"
+                className="rounded-xl px-2 py-1 text-sm font-semibold text-foreground/80 hover:bg-foreground/5 hover:text-foreground"
               >
                 {href === "/services"
                   ? t("services")

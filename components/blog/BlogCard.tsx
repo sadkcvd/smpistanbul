@@ -16,7 +16,7 @@ export async function BlogCard({
   const dateLocale = locale === "en" ? "en-US" : "tr-TR";
 
   return (
-    <article className="group flex h-full flex-col rounded-2xl border border-foreground/10 bg-background p-4 shadow-sm">
+    <article className="group flex h-full flex-col rounded-2xl border border-(--border) bg-(--surface) p-4 shadow-sm">
       {/* Image */}
       <div className="relative aspect-[16/10] shrink-0 overflow-hidden rounded-xl bg-foreground/5">
         <Image
@@ -65,14 +65,14 @@ export async function BlogCard({
 
         <Link
           href={href}
-          className="hidden rounded-full px-4 py-2 text-sm font-bold text-[var(--brand-accent)] hover:bg-foreground/5 md:inline-flex"
+          className="hidden rounded-full px-4 py-2 text-sm font-bold text-(--brand-accent) hover:bg-foreground/5 md:inline-flex"
         >
           {t("card.read")}
         </Link>
 
         <Link
           href={href}
-          className="text-sm font-bold text-[var(--brand-accent)] underline underline-offset-4 md:hidden"
+          className="text-sm font-bold text-(--brand-accent) underline underline-offset-4 md:hidden"
         >
           {t("card.readMore")}
         </Link>

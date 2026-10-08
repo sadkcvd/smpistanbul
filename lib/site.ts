@@ -12,8 +12,13 @@ export const siteConfig = {
   phoneE164: process.env.NEXT_PUBLIC_PHONE_E164 ?? "+905550000000",
   whatsappE164: process.env.NEXT_PUBLIC_WHATSAPP_E164 ?? "+905550000000",
   whatsappText: "Merhaba, SMP Istanbul’dan saç simülasyonu hakkında bilgi almak istiyorum. Uygulama süreci, uygunluk ve fiyatlandırma hakkında bilgi alabilir miyim?",
-  address: "İstanbul, Türkiye",
+  address: "Zorlu Center, Levazım, Koru Sokağı No:2, Ofis No:1, 34340 Beşiktaş/İstanbul",
+  lat: 41.0672,
+  lng: 29.0173,
   email: process.env.NEXT_PUBLIC_EMAIL ?? "info@example.com",
-  brandAccent: "#E5B93F",
+  // Set via env once a real clinic video is published; the hero "watch video"
+  // button only renders when this is non-empty.
+  heroYoutubeUrl: process.env.NEXT_PUBLIC_HERO_YOUTUBE_URL ?? "",
+  brandAccent: "#C9A96A",
 } as const;
 

@@ -12,7 +12,7 @@ export function BeforeAfterGallery() {
     <section className="py-12" aria-label={t("ariaLabel")}>
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col gap-2">
-          <div className="text-sm font-bold tracking-widest text-[var(--brand-accent)]">
+          <div className="text-sm font-bold tracking-widest text-(--brand-accent)">
             {t("kicker")}
           </div>
           <h1 className="text-2xl font-black tracking-tight text-foreground sm:text-3xl">
@@ -23,12 +23,13 @@ export function BeforeAfterGallery() {
           </p>
         </div>
 
-        <div className="mt-8">
+        <div className="mx-auto mt-8 max-w-md">
           <BeforeAfterSlider
             label={primary.title}
             before={primary.beforeImage}
             after={primary.afterImage}
             initialPercent={52}
+            aspectClassName="aspect-[4/5]"
           />
         </div>
 
@@ -36,28 +37,28 @@ export function BeforeAfterGallery() {
           {beforeAfterGallery.slice(1).map((g) => (
             <div
               key={g.id}
-              className="rounded-2xl border border-foreground/10 bg-background p-4"
+              className="rounded-2xl border border-(--border) bg-(--surface) p-4"
             >
               <div className="text-sm font-black text-foreground">{g.title}</div>
               <div className="mt-3 grid gap-3 sm:grid-cols-2">
-                <div className="relative aspect-[4/3] overflow-hidden rounded-xl bg-foreground/5">
+                <div className="relative aspect-[4/5] overflow-hidden rounded-xl bg-foreground/5">
                   <Image
                     src={g.beforeImage.src}
                     alt={g.beforeImage.alt}
                     fill
                     className="object-cover"
                     loading="eager"
-                    sizes="(max-width: 768px) 100vw, 360px"
+                    sizes="(max-width: 768px) 100vw, 240px"
                   />
                 </div>
-                <div className="relative aspect-[4/3] overflow-hidden rounded-xl bg-foreground/5">
+                <div className="relative aspect-[4/5] overflow-hidden rounded-xl bg-foreground/5">
                   <Image
                     src={g.afterImage.src}
                     alt={g.afterImage.alt}
                     fill
                     className="object-cover"
                     loading="lazy"
-                    sizes="(max-width: 768px) 100vw, 360px"
+                    sizes="(max-width: 768px) 100vw, 240px"
                   />
                 </div>
               </div>

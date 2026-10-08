@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function NotFound() {
   return (
     <div className="mx-auto flex min-h-[50vh] max-w-3xl flex-col items-start gap-6 px-4 py-16 sm:px-6">
-      <div className="text-sm font-bold tracking-widest text-[var(--brand-accent)]">
+      <div className="text-sm font-bold tracking-widest text-(--brand-accent)">
         404
       </div>
       <h1 className="text-3xl font-black tracking-tight">Sayfa bulunamadı</h1>

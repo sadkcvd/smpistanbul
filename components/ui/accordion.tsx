@@ -21,7 +21,7 @@ export const AccordionItem = ({
 }: AccordionPrimitive.AccordionItemProps) => (
   <AccordionPrimitive.Item
     className={cn(
-      "border-b border-foreground/10 data-[state=open]:border-foreground/20",
+      "border-b border-(--border) data-[state=open]:border-(--border-strong)",
       className
     )}
     {...props}
@@ -43,7 +43,7 @@ export const AccordionTrigger = ({
     >
       <span className="leading-6">{children}</span>
       <ChevronDown
-        className="h-5 w-5 shrink-0 text-foreground/70 transition-transform duration-200 group-data-[state=open]:rotate-180"
+        className="h-5 w-5 shrink-0 text-foreground/70 transition-transform duration-200 group-data-[state=open]:rotate-180 group-data-[state=open]:text-(--brand-accent)"
         aria-hidden="true"
       />
     </AccordionPrimitive.Trigger>

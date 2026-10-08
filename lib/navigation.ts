@@ -16,6 +16,10 @@ export const navItems = [
       translationKey: "services",
     },
     {
+      href: "/airport-transfer",
+      translationKey: "airportTransfer",
+    },
+    {
       href: "/faq",
       translationKey: "faq",
     },

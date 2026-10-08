@@ -96,7 +96,7 @@ export function MobileNav() {
                 flex-col
                 overflow-hidden
                 border-l border-foreground/10
-                bg-background
+                bg-(--surface)
                 shadow-2xl
               "
               initial={{ x: "100%" }}
@@ -150,7 +150,7 @@ export function MobileNav() {
 
                 {/* Mobile Settings */}
                 <div className="mt-6 border-t border-foreground/10 pt-5">
-                  <div className="rounded-2xl bg-foreground/5 p-4">
+                  <div className="rounded-2xl bg-(--background-secondary) p-4">
                     <div className="flex items-center justify-between gap-4">
                       <span className="text-sm font-semibold text-foreground">
                         {t("language")}

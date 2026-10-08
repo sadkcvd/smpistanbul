@@ -13,7 +13,7 @@ export function BeforeAfterPreview() {
     <section className="py-12" aria-label={t("gallery.ariaLabel")}>
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col gap-2">
-          <div className="text-sm font-bold tracking-widest text-[var(--brand-accent)]">
+          <div className="text-sm font-bold tracking-widest text-(--brand-accent)">
             {t("gallery.kicker")}
           </div>
 
@@ -36,7 +36,7 @@ export function BeforeAfterPreview() {
             />
           </div>
 
-          <div className="rounded-2xl border border-foreground/10 bg-background p-5">
+          <div className="rounded-2xl border border-(--border) bg-(--surface) p-5">
             <div className="text-sm font-black text-foreground">
               {secondary.title}
             </div>

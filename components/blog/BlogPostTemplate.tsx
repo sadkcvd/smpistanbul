@@ -23,7 +23,7 @@ function BlogBlock({ block }: { block: BlogPost["blocks"][number] }) {
   }
   if (block.type === "quote") {
     return (
-      <div className="my-6 rounded-2xl border border-foreground/10 bg-foreground/5 p-4">
+      <div className="my-6 rounded-2xl border border-(--border) border-l-4 border-l-(--brand-accent) bg-(--background-secondary) p-4">
         <div className="text-sm font-bold text-foreground">
           “{block.text}”
         </div>
@@ -46,7 +46,7 @@ export async function BlogPostTemplate({
     <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-8">
       <div className="grid gap-8">
         <article className="min-w-0 max-w-3xl">
-          <div className="relative aspect-[16/9] overflow-hidden rounded-2xl border border-foreground/10 bg-foreground/5">
+          <div className="relative aspect-[16/9] overflow-hidden rounded-2xl border border-(--border) bg-(--background-secondary)">
             <Image
               src={post.coverImage.src}
               alt={post.coverImage.alt}

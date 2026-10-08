@@ -31,7 +31,7 @@ function todayISODate() {
 
 function ErrorSlot({ message }: { message?: string }) {
   return (
-    <p className="min-h-5 text-xs font-semibold leading-5 text-[var(--brand-accent)]">
+    <p className="min-h-5 text-xs font-semibold leading-5 text-(--brand-accent)">
       {message ?? "\u00A0"}
     </p>
   );
@@ -105,7 +105,7 @@ export function AppointmentRequestForm({
 
   return (
     <section id={id} className={className}>
-      <div className="rounded-2xl border border-foreground/10 bg-background p-5 sm:p-6">
+      <div className="rounded-2xl border border-(--border) bg-(--surface) p-5 sm:p-6">
         <div className="mb-4">
           <h2 className="text-xl font-black tracking-tight text-foreground">
             {heading}
@@ -140,7 +140,7 @@ export function AppointmentRequestForm({
                     unmask={false}
                     overwrite={true}
                     placeholder="+90 (5XX) XXX XX XX"
-                    className="flex h-11 w-full rounded-xl border border-foreground/15 bg-background px-4 text-sm text-foreground placeholder:text-foreground/40 shadow-sm outline-none ring-offset-background focus-visible:ring-2 focus-visible:ring-[var(--brand-accent)] focus-visible:ring-offset-0 disabled:cursor-not-allowed disabled:opacity-60"
+                    className="flex h-11 w-full rounded-xl border border-(--border) bg-(--surface) px-4 text-sm text-foreground placeholder:text-foreground/40 shadow-sm outline-none ring-offset-background focus-visible:ring-2 focus-visible:ring-(--brand-accent)/40 focus-visible:ring-offset-0 disabled:cursor-not-allowed disabled:opacity-60"
                     onAccept={(value) => {
                       field.onChange(value);
                     }}
@@ -163,7 +163,7 @@ export function AppointmentRequestForm({
               <Label htmlFor="hairLossType">{t("form.hairLossType")}</Label>
               <select
                 id="hairLossType"
-                className="flex h-11 w-full rounded-xl border border-foreground/15 bg-background px-4 text-sm text-foreground shadow-sm outline-none ring-offset-background focus-visible:ring-2 focus-visible:ring-[var(--brand-accent)] focus-visible:ring-offset-0 disabled:cursor-not-allowed disabled:opacity-60"
+                className="flex h-11 w-full rounded-xl border border-(--border) bg-(--surface) px-4 text-sm text-foreground shadow-sm outline-none ring-offset-background focus-visible:ring-2 focus-visible:ring-(--brand-accent)/40 focus-visible:ring-offset-0 disabled:cursor-not-allowed disabled:opacity-60"
                 {...register("hairLossType")}
               >
                 <option value="" disabled>
@@ -219,7 +219,7 @@ export function AppointmentRequestForm({
             <Button
               type="submit"
               disabled={isSubmitting}
-              className="w-full sm:w-auto text-[var(--text-on-cta)]"
+              className="w-full sm:w-auto text-(--text-on-cta)"
               variant="accent"
             >
               {isSubmitting ? t("form.sending") : submitLabel ?? t("form.submit")}
@@ -228,7 +228,7 @@ export function AppointmentRequestForm({
 
           {successMessage ? (
             <div
-              className="rounded-2xl border border-foreground/10 bg-foreground/5 p-4"
+              className="rounded-2xl border border-(--border) bg-(--background-secondary) p-4"
               role="status"
               aria-live="polite"
             >
@@ -243,11 +243,11 @@ export function AppointmentRequestForm({
 
           {errorMessage ? (
             <div
-              className="rounded-2xl border border-[var(--brand-accent)]/20 bg-[var(--brand-accent)]/5 p-4"
+              className="rounded-2xl border border-(--brand-accent)/20 bg-(--brand-accent)/5 p-4"
               role="alert"
               aria-live="polite"
             >
-              <div className="text-sm font-bold text-[var(--brand-accent)]">
+              <div className="text-sm font-bold text-(--brand-accent)">
                 {t("form.errorTitle")}
               </div>
               <div className="mt-1 text-sm font-semibold text-foreground/80">

@@ -91,6 +91,10 @@ Next.js ile ilgili kod yazmadan önce mümkün olduğunda:
 - Server-only kodun client bundle'a girmesine izin verme.
 - Browser API'leri, event handler'lar veya client state gerektirmeyen componentleri Client Component yapma.
 
+### Metadata Route Dosyaları (icon, apple-icon, opengraph-image, vb.)
+
+- Kodla üretilen metadata route'ları (`app/apple-icon.tsx` vb.) uzantısız URL'den servis edilir; `proxy.ts` matcher'ındaki dışlama listesinde olmazlarsa next-intl `/tr/apple-icon`'a yönlendirir → 404. Yeni böyle bir route eklersen listeye ekle, mevcutları çıkarma. Statik dosyalar (`app/icon.svg`) uzantılı olduğu için etkilenmez.
+
 ---
 
 ## 4. TypeScript ve Tip Güvenliği
@@ -229,6 +233,18 @@ SEO/refactor çalışmasına başlamadan önce `/plan` oluştur ve kullanıcı o
 
 UI değişikliklerinde mevcut tasarımı bozacak gereksiz görsel değişiklikler yapma.
 
+### Renk Sistemi
+
+- Birincil marka rengi (altın) token'ları: `app/globals.css` (`--brand-accent`, `--cta-gold`, `--cta-gold-hover`, `--text-on-cta`). Site genelinde birincil CTA/vurgu rengidir.
+- İkincil vurgu token'ları: `app/globals.css` (`--secondary-accent`, `--secondary-accent-hover`, `--secondary-accent-foreground`). Yalnızca seçici noktalarda kullanılır (link hover, harita CTA, galeri vurgusu/focus ring) — birincil rengin yerini almaz, bir öğeyi veya sayfanın tamamını bu renge çevirme.
+- Yeni custom property eklerken `@theme inline` bloğuna eklemeden, mevcut token'lar gibi `bg-(--token-adı)` arbitrary-shorthand sözdizimiyle kullan.
+
+### Medya ve Görsel Kaynakları
+
+- Ham/stok görselleri `public/images/`'e eklemeden önce optimize et (uzun kenar ~1600px, düşük dosya boyutu).
+- Klinik/ofis galerisine eklenecek görseller gerçekten bu kliniğe ait olmalı; başka bir gerçek hekim/hastaya veya tanımlanabilir başka bir işletmeye ait stok görseller kullanma (yanlış temsil riski).
+- Galeri/carousel ihtiyaçlarında mevcut `components/ui/carousel.tsx`'i (embla-carousel-react) reuse et, yeni bir carousel primitive'i yazma.
+
 ---
 
 ## 11. Yeni NPM Paketi Ekleme Kuralları
@@ -257,6 +273,17 @@ npm run lint
 npm run prisma:generate
 npm run prisma:migrate
 ```
+
+---
+
+## 13. Proje Spesifik Component ve Convention'lar
+
+- **Logo:** `components/site/Logo.tsx` — inline SVG, tema-uyumlu (`currentColor` / `--brand-accent`). Yeni logo kullanım yerlerinde bu component'i reuse et, raster `/images/logo.png`'yi tekrar import etme.
+- **Hero:** `components/sections/HeroSection.tsx` (Server) + `components/sections/HeroHeadline.tsx` (Client, metin/CTA/animasyon) + `components/media/HeroVideo.tsx` (Client, video mount-gate). Yeni hero metni eklerken `HeroSection.tsx`'i client yapma, metin/CTA değişikliklerini `HeroHeadline.tsx`'e ekle.
+- **Hero video CTA:** `siteConfig.heroYoutubeUrl` (`lib/site.ts`, env: `NEXT_PUBLIC_HERO_YOUTUBE_URL`). Boşsa ilgili buton render olmaz; sahte/placeholder link commit etme.
+- **Klinik Galeri:** `components/gallery/ClinicGallery.tsx` + `lib/clinic-gallery.ts`. Mevcut `components/ui/carousel.tsx`'i kullan.
+- **Harita:** `components/site/ClinicMapCard.tsx` + `siteConfig.address`/`lat`/`lng` (`lib/site.ts`). Yeni harita kütüphanesi ekleme, deep-link (Google/Apple Maps) pattern'ini koru.
+- **Sayfa geçişi:** `components/site/PageTransition.tsx`, `app/[locale]/layout.tsx` içinde `<main>`'i sarmalar. `useReducedMotion` kontrolüne uy, `layout.tsx`'i client yapma.
 
 ---
 
@@ -295,3 +322,9 @@ npm run prisma:migrate
 **Doğrulama:** `npx tsc --noEmit` → 0 hata, `npm run lint` → 0 hata/0 uyarı, `npm run build` → 34/34 statik sayfa başarıyla oluşturuldu.
 
 **Not:** `Next.js 16 uyumluluk taraması` sırasında `middleware.ts → proxy.ts` geçişinin projede zaten uygulanmış olduğu ve `layout.tsx`/`lib/seo.ts` içindeki metadata yapısının (`metadataBase`, `openGraph`, `twitter`, `robots`, `alternates`) güncel Next.js 16 Metadata API'siyle uyumlu olduğu teyit edildi; bu alanlarda değişiklik gerekmedi.
+
+### 2026-10-08 — Lüks SMP Dönüşümü (Renk, Hero, Klinik Galeri, Harita, SEO, Animasyon)
+
+**Kapsam:** Site genelinde lüks/kurumsal SMP kliniği vizyonu uygulandı: ikincil Midnight Blue vurgu rengi eklendi, logo/favicon SVG'ye geçirildi, Hero section full-bleed hale getirilip framer-motion animasyonu ve opsiyonel YouTube CTA'sı eklendi, Klinik Galeri bileşeni landing page'e eklendi, Zorlu Center harita entegrasyonu yapıldı, "Hakkımızda" sayfası SEO için yeniden yazıldı, global sayfa geçiş animasyonu eklendi. Yeni token/component/convention detayları için bkz. "10. Styling ve UI → Renk Sistemi / Medya ve Görsel Kaynakları" ve "13. Proje Spesifik Component ve Convention'lar".
+
+**Doğrulama:** Her değişiklik partisinden sonra `npx tsc --noEmit`, `npm run lint`, `npm run build` çalıştırıldı (hepsi temiz); `/tr`, `/tr/contact`, `/tr/about` sayfaları dev sunucusunda manuel kontrol edildi.
