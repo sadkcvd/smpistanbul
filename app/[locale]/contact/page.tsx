@@ -1,4 +1,4 @@
-import { AppointmentRequestForm } from "@/components/forms/AppointmentRequestForm";
+import { WhatsAppContactCard } from "@/components/forms/WhatsAppContactCard";
 import { buildMetadata } from "@/lib/seo";
 import { siteConfig } from "@/lib/site";
 import { localizedPath, normalizeLocale } from "@/lib/i18n";
@@ -79,12 +79,11 @@ export default async function ContactPage({ params }: {params: Promise<{ locale:
               </div>
             </div>
 
-            <AppointmentRequestForm
+            <WhatsAppContactCard
               id="contact-form"
-              namespace="Contact"
-              heading={t("form.heading")}
-              helperText={t("form.helperText")}
-              submitLabel={t("form.submit")}
+              heading={t("whatsappCta.heading")}
+              helperText={t("whatsappCta.helperText")}
+              ctaLabel={t("whatsappCta.cta")}
             />
           </div>
         </div>

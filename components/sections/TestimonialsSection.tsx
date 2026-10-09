@@ -71,7 +71,7 @@ export function TestimonialsSection() {
                   </div>
 
                   <p className="mt-3 text-sm leading-7 text-(--foreground-secondary)">
-                    “{testimonial.quote}”
+                    {testimonial.quote}
                   </p>
                 </Card>
               </CarouselItem>

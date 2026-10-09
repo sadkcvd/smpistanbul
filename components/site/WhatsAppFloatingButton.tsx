@@ -2,19 +2,12 @@
 
 import { MessageCircle } from "lucide-react";
 import { useTranslations } from "next-intl";
-import { siteConfig } from "@/lib/site";
+import { buildWhatsAppHref } from "@/lib/whatsapp";
 import { Button } from "@/components/ui/button";
-
-function toWhatsAppHref(whatsAppE164: string) {
-  const digits = whatsAppE164.replace(/\D/g, "");
-  return `https://wa.me/${digits}?text=${encodeURIComponent(
-    siteConfig.whatsappText
-  )}`;
-}
 
 export function WhatsAppFloatingButton() {
   const t = useTranslations("Contact");
-  const href = toWhatsAppHref(siteConfig.whatsappE164);
+  const href = buildWhatsAppHref();
 
   return (
     <Button

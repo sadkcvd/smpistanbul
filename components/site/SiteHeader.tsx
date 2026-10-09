@@ -17,6 +17,15 @@ export function SiteHeader() {
   const pathname = usePathname();
   const locale = localeFromPathname(pathname);
   const t = useTranslations("Navigation");
+  const homeHref = localizedPath("/", locale);
+  const isHome = pathname === homeHref;
+
+  const scrollToTopIfHome = (href: string) => (e: React.MouseEvent) => {
+    if (href === homeHref && isHome) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
 
   return (
     <header className="sticky top-0 z-40 border-b border-(--border) bg-(--surface)/90 backdrop-blur">
@@ -25,9 +34,10 @@ export function SiteHeader() {
 
           {/* Logo */}
           <Link
-            href={localizedPath("/", locale)}
+            href={homeHref}
             aria-label="SMP İstanbul Ana Sayfa"
             className="flex shrink-0 items-center"
+            onClick={scrollToTopIfHome(homeHref)}
           >
             <Logo />
           </Link>
@@ -37,15 +47,19 @@ export function SiteHeader() {
             aria-label="Primary navigation"
             className="hidden min-w-0 flex-1 items-center justify-center gap-1 lg:flex"
           >
-            {navItems.map((item) => (
-              <Link
-                key={item.href}
-                href={localizedPath(item.href, locale)}
-                className="shrink-0 rounded-full px-3 py-2 text-sm font-semibold text-foreground/80 transition hover:bg-foreground/5 hover:text-foreground"
-              >
-                {t(item.translationKey)}
-              </Link>
-            ))}
+            {navItems.map((item) => {
+              const href = localizedPath(item.href, locale);
+              return (
+                <Link
+                  key={item.href}
+                  href={href}
+                  className="shrink-0 rounded-full px-3 py-2 text-sm font-semibold text-foreground/80 transition hover:bg-foreground/5 hover:text-foreground"
+                  onClick={scrollToTopIfHome(href)}
+                >
+                  {t(item.translationKey)}
+                </Link>
+              );
+            })}
           </nav>
 
           {/* Desktop Actions */}

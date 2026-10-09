@@ -29,7 +29,7 @@ export function BeforeAfterGallery() {
             before={primary.beforeImage}
             after={primary.afterImage}
             initialPercent={52}
-            aspectClassName="aspect-[4/5]"
+            aspectClassName="aspect-[5/5]"
           />
         </div>
 

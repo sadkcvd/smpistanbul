@@ -21,6 +21,8 @@ export function MobileNav() {
 
   const pathname = usePathname();
   const locale = localeFromPathname(pathname);
+  const homeHref = localizedPath("/", locale);
+  const isHome = pathname === homeHref;
 
   const t = useTranslations("Navigation");
 
@@ -127,25 +129,34 @@ export function MobileNav() {
               {/* Navigation */}
               <div className="flex-1 overflow-y-auto px-5 py-5">
                 <nav className="grid gap-1.5">
-                  {navItems.map((item) => (
-                    <Link
-                      key={item.href}
-                      href={localizedPath(item.href, locale)}
-                      className="
-                        rounded-xl
-                        px-3
-                        py-3
-                        text-sm
-                        font-semibold
-                        text-foreground/90
-                        transition
-                        hover:bg-foreground/5
-                      "
-                      onClick={() => setOpen(false)}
-                    >
-                      {t(item.translationKey)}
-                    </Link>
-                  ))}
+                  {navItems.map((item) => {
+                    const href = localizedPath(item.href, locale);
+                    return (
+                      <Link
+                        key={item.href}
+                        href={href}
+                        className="
+                          rounded-xl
+                          px-3
+                          py-3
+                          text-sm
+                          font-semibold
+                          text-foreground/90
+                          transition
+                          hover:bg-foreground/5
+                        "
+                        onClick={(e) => {
+                          setOpen(false);
+                          if (href === homeHref && isHome) {
+                            e.preventDefault();
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                          }
+                        }}
+                      >
+                        {t(item.translationKey)}
+                      </Link>
+                    );
+                  })}
                 </nav>
 
                 {/* Mobile Settings */}

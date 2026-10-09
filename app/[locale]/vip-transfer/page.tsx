@@ -10,22 +10,22 @@ export async function generateMetadata({
 }) {
   const { locale: rawLocale } = await params;
   const locale = normalizeLocale(rawLocale);
-  const t = await getTranslations({ locale, namespace: "AirportTransfer" });
+  const t = await getTranslations({ locale, namespace: "VipTransfer" });
   return buildMetadata({
     title: t("meta.title"),
     description: t("meta.description"),
-    path: localizedPath("/airport-transfer", locale),
+    path: localizedPath("/vip-transfer", locale),
   });
 }
 
-export default async function AirportTransferPage({
+export default async function VipTransferPage({
   params,
 }: {
   params: Promise<{ locale: string }>;
 }) {
   const { locale: rawLocale } = await params;
   const locale = normalizeLocale(rawLocale);
-  const t = await getTranslations({ locale, namespace: "AirportTransfer" });
+  const t = await getTranslations({ locale, namespace: "VipTransfer" });
 
   const directions = [
     {

@@ -41,13 +41,13 @@
       "items": {
         "clients": { "value": "500+", "label": "Happy clients" },
         "experience": { "value": "5+", "label": "Years of experience" },
-        "satisfaction": { "value": "%98", "label": "Satisfaction rate" }
+        "satisfaction": { "value": "%100", "label": "Satisfaction rate" }
       }
     },
     "clinicGallery": {
       "ariaLabel": "Clinic gallery",
       "kicker": "OUR CLINIC",
-      "title": "Our clinic at Zorlu Center",
+      "title": "Our clinic in Şişli",
       "subtitle": "A comfortable, hygienic, and professional environment for personalized SMP treatment.",
       "previous": "Previous photo",
       "next": "Next photo"
@@ -62,6 +62,11 @@
         "hairLossType": "Hair loss type",
         "dateMessage": "Preferred date and short message"
       }
+    },
+    "whatsappCta": {
+      "heading": "Reach Us on WhatsApp",
+      "helperText": "The fastest way to get appointment info is WhatsApp. Send a message and we'll get right back to you.",
+      "cta": "Message Us on WhatsApp"
     },
     "form": {
       "heading": "Appointment Request",
@@ -165,37 +170,37 @@
       "cta": "Contact us"
     }
   },
-  "AirportTransfer": {
+  "VipTransfer": {
     "meta": {
-      "title": "Airport Transfer Service",
-      "description": "Exclusive to SMP Istanbul clients: a comfortable, reliable transfer from the airport to our clinic and back."
+      "title": "VIP Transfer Service",
+      "description": "Exclusive to SMP Istanbul clients: a comfortable, reliable VIP transfer from the airport, your hotel, or anywhere in Istanbul to our clinic."
     },
     "hero": {
       "kicker": "VIP TRANSFER",
-      "title": "Our airport transfer service",
-      "subtitle": "For guests visiting from outside Istanbul, we provide a comfortable transfer from the airport to our clinic, and back to the airport after your treatment."
+      "title": "Our VIP transfer service across Istanbul",
+      "subtitle": "From the airport, your hotel, or anywhere in Istanbul to our clinic, and back to your destination after your treatment — we provide a comfortable VIP transfer."
     },
     "directions": {
       "toClinic": {
-        "title": "From the airport to our clinic",
-        "description": "When your flight lands, we meet you at the airport and take you to our clinic at Zorlu Center in a comfortable vehicle."
+        "title": "We'll pick you up",
+        "description": "Whether you're arriving from the airport, your hotel, or anywhere in Istanbul, we pick you up and bring you safely to our clinic in Şişli."
       },
       "toAirport": {
-        "title": "From our clinic to the airport",
-        "description": "After your appointment is complete, we pick you up from our clinic and safely drop you off at the airport for your return flight."
+        "title": "We'll drop you off",
+        "description": "After your appointment is complete, we pick you up from our clinic and drop you off at the airport, your hotel, or anywhere in Istanbul."
       }
     },
     "details": {
       "title": "How it works",
       "items": {
-        "0": "Share your flight details when confirming your appointment",
+        "0": "Share your location and flight details (if any) when confirming your appointment",
         "1": "We'll agree on the transfer time together",
         "2": "Our driver will meet you at the agreed point"
       }
     },
     "contact": {
       "title": "Request a transfer",
-      "subtitle": "Share your flight details and appointment date, and we'll plan your transfer for you.",
+      "subtitle": "Share your location and appointment date, and we'll plan your transfer for you.",
       "cta": "Contact us"
     }
   },
@@ -291,9 +296,14 @@
     },
     "location": {
       "title": "Istanbul location",
-      "description": "Our clinic is located inside Zorlu Center, Beşiktaş. Use the buttons below to get directions via Google Maps or Apple Maps.",
+      "description": "Our clinic is located on Elmadağ Caddesi in Şişli. Use the buttons below to get directions via Google Maps or Apple Maps.",
       "openGoogleMaps": "Open in Google Maps",
       "openAppleMaps": "Open in Apple Maps"
+    },
+    "whatsappCta": {
+      "heading": "Reach Us on WhatsApp",
+      "helperText": "The fastest way to get appointment info is WhatsApp. Send a message and we'll get right back to you.",
+      "cta": "Message Us on WhatsApp"
     },
     "form": {
       "heading": "Appointment Request",
@@ -325,7 +335,7 @@
     "about": {
       "meta": {
         "title": "About Us | Scalp Micropigmentation (SMP) Clinic in Istanbul",
-        "description": "Our scalp micropigmentation (SMP) expertise at Zorlu Center, Istanbul: a natural-looking, minimal, and professional approach to male pattern baldness, hair thinning, and scar camouflage."
+        "description": "Our scalp micropigmentation (SMP) expertise in Şişli, Istanbul: a natural-looking, minimal, and professional approach to male pattern baldness, hair thinning, and scar camouflage."
       },
       "hero": {
         "kicker": "ABOUT",
@@ -364,7 +374,7 @@
     "simulation": "Hair Simulation",
     "gallery": "Gallery",
     "services": "Services",
-    "airportTransfer": "Airport Transfer",
+    "vipTransfer": "VIP Transfer",
     "faq": "FAQ",
     "blog": "Blog",
     "contact": "Contact",

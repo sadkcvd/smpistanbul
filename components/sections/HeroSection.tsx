@@ -31,7 +31,8 @@ export function HeroSection({
         {videoSources && videoPoster ? (
           <>
             <HeroVideo sources={videoSources} poster={videoPoster} />
-            <div className="absolute inset-0 bg-background/70" />
+            <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/55 to-background/20" />
+            <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
           </>
         ) : null}
         <div className="absolute -left-24 top-10 h-72 w-72 rounded-full bg-(--brand-accent)/20 blur-3xl" />
@@ -51,7 +52,7 @@ export function HeroSection({
           />
 
           {heroImageSrc ? (
-            <div className="relative aspect-4/3 overflow-hidden rounded-3xl border border-foreground/10 bg-foreground/5">
+            <div className="relative aspect-4/3 overflow-hidden rounded-3xl border border-(--border) bg-(--surface) shadow-xl shadow-black/15">
               <Image
                 src={heroImageSrc}
                 alt="Hero görseli (örnek)"
@@ -61,6 +62,8 @@ export function HeroSection({
                 loading="eager"
                 fetchPriority="high"
               />
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/35 via-transparent to-transparent" />
+              <div className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-(--border)" />
             </div>
           ) : (
             <div className="rounded-3xl border border-foreground/10 bg-foreground/5 p-6">

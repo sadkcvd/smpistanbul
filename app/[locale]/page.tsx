@@ -1,5 +1,5 @@
 import { HeroSection } from "@/components/sections/HeroSection";
-import { AppointmentRequestForm } from "@/components/forms/AppointmentRequestForm";
+import { WhatsAppContactCard } from "@/components/forms/WhatsAppContactCard";
 import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
 import { FAQSection } from "@/components/sections/FAQSection";
 import { BeforeAfterPreview } from "@/components/gallery/BeforeAfterPreview";
@@ -55,7 +55,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
 
       <StatsSection />
 
-      <section className="py-10 sm:py-12">
+      {/* <section className="py-10 sm:py-12">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-4 sm:grid-cols-3">
             {[
@@ -93,7 +93,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       <ClinicGallery />
 
@@ -125,12 +125,11 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
             </div>
 
             <div>
-              <AppointmentRequestForm
+              <WhatsAppContactCard
                 id="contact-form"
-                namespace="Home"
-                heading={t("form.heading")}
-                helperText={t("form.helperText")}
-                submitLabel={t("form.submit")}
+                heading={t("whatsappCta.heading")}
+                helperText={t("whatsappCta.helperText")}
+                ctaLabel={t("whatsappCta.cta")}
               />
             </div>
           </div>

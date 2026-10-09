@@ -4,8 +4,7 @@ export const testimonials = [
     name: "E. K.",
     title: "Erkek tipi kellik",
     rating: 5,
-    quote:
-      "Uygulama sonrası saç çizgim doğal göründü. İlk günden beri “çok iyi oldu” dediler. Süreç çok profesyoneldi.",
+    quote: "Uygulama sonrası saç çizgim doğal göründü. İlk günden beri “çok iyi oldu” dediler. Süreç çok profesyoneldi.",
     avatarText: "EK",
   },
   {

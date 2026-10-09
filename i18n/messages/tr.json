@@ -41,13 +41,13 @@
       "items": {
         "clients": { "value": "500+", "label": "Memnun müşteri" },
         "experience": { "value": "5+", "label": "Yıl deneyim" },
-        "satisfaction": { "value": "%98", "label": "Memnuniyet oranı" }
+        "satisfaction": { "value": "%100", "label": "Memnuniyet oranı" }
       }
     },
     "clinicGallery": {
       "ariaLabel": "Klinik galerisi",
       "kicker": "KLİNİĞİMİZ",
-      "title": "Zorlu Center'daki kliniğimiz",
+      "title": "Şişli'deki kliniğimiz",
       "subtitle": "Konforlu, hijyenik ve profesyonel bir ortamda kişiye özel SMP uygulaması.",
       "previous": "Önceki fotoğraf",
       "next": "Sonraki fotoğraf"
@@ -62,6 +62,11 @@
         "hairLossType": "Saç kaybı tipi",
         "dateMessage": "Tercih edilen tarih ve kısa mesaj"
       }
+    },
+    "whatsappCta": {
+      "heading": "Bize WhatsApp'tan Ulaşın",
+      "helperText": "Randevu ve bilgi almak için en hızlı yöntem WhatsApp. Mesaj gönderin, hemen dönüş yapalım.",
+      "cta": "WhatsApp'tan Yazın"
     },
     "form": {
       "heading": "Randevu Talebi",
@@ -165,37 +170,37 @@
       "cta": "İletişime geç"
     }
   },
-  "AirportTransfer": {
+  "VipTransfer": {
     "meta": {
-      "title": "Havalimanı Transfer Hizmeti",
-      "description": "SMP İstanbul müşterilerine özel: havalimanından kliniğimize, kliniğimizden havalimanına konforlu ve güvenli transfer hizmeti."
+      "title": "VIP Transfer Hizmeti",
+      "description": "SMP İstanbul müşterilerine özel: havalimanı, otel veya İstanbul içinde herhangi bir noktadan kliniğimize konforlu ve güvenli VIP transfer hizmeti."
     },
     "hero": {
       "kicker": "VIP TRANSFER",
-      "title": "Havalimanı transfer hizmetimiz",
-      "subtitle": "İstanbul dışından gelen misafirlerimiz için havalimanından kliniğimize, işlem sonrası da kliniğimizden havalimanına konforlu transfer sağlıyoruz."
+      "title": "İstanbul içinde VIP transfer hizmetimiz",
+      "subtitle": "Havalimanından, otelinizden veya İstanbul içindeki herhangi bir noktadan kliniğimize; işlem sonrası da istediğiniz noktaya konforlu VIP transfer sağlıyoruz."
     },
     "directions": {
       "toClinic": {
-        "title": "Havalimanından kliniğimize",
-        "description": "Uçağınız iniş yaptığında sizi havalimanında karşılıyor, Zorlu Center'daki kliniğimize konforlu bir araçla ulaştırıyoruz."
+        "title": "Sizi alalım",
+        "description": "Havalimanından, otelinizden veya İstanbul içindeki herhangi bir noktadan sizi alıp Şişli'deki kliniğimize konforlu bir araçla ulaştırıyoruz."
       },
       "toAirport": {
-        "title": "Kliniğimizden havalimanına",
-        "description": "Randevunuz tamamlandıktan sonra sizi kliniğimizden alıp dönüş uçağınız için havalimanına güvenle bırakıyoruz."
+        "title": "Sizi bırakalım",
+        "description": "Randevunuz tamamlandıktan sonra sizi kliniğimizden alıp havalimanına, otelinize veya İstanbul içinde istediğiniz noktaya güvenle bırakıyoruz."
       }
     },
     "details": {
       "title": "Nasıl çalışır?",
       "items": {
-        "0": "Randevu onayında uçuş bilgilerinizi bizimle paylaşın",
+        "0": "Randevu onayında konumunuzu ve varsa uçuş bilgilerinizi bizimle paylaşın",
         "1": "Transfer saatini birlikte netleştirelim",
         "2": "Sürücümüz sizi belirlenen noktada karşılasın"
       }
     },
     "contact": {
       "title": "Transfer talebi oluşturun",
-      "subtitle": "Uçuş bilgilerinizi ve randevu tarihinizi paylaşın, transferinizi sizin için planlayalım.",
+      "subtitle": "Konumunuzu ve randevu tarihinizi paylaşın, transferinizi sizin için planlayalım.",
       "cta": "İletişime geç"
     }
   },
@@ -291,9 +296,14 @@
     },
     "location": {
       "title": "İstanbul konum",
-      "description": "Kliniğimiz Beşiktaş Zorlu Center içinde yer almaktadır. Aşağıdaki butonlarla Google Maps veya Apple Maps üzerinden yol tarifi alabilirsiniz.",
+      "description": "Kliniğimiz Şişli, Elmadağ Caddesi'nde yer almaktadır. Aşağıdaki butonlarla Google Maps veya Apple Maps üzerinden yol tarifi alabilirsiniz.",
       "openGoogleMaps": "Google Maps'te Aç",
       "openAppleMaps": "Apple Maps'te Aç"
+    },
+    "whatsappCta": {
+      "heading": "Bize WhatsApp'tan Ulaşın",
+      "helperText": "Randevu ve bilgi almak için en hızlı yöntem WhatsApp. Mesaj gönderin, hemen dönüş yapalım.",
+      "cta": "WhatsApp'tan Yazın"
     },
     "form": {
       "heading": "Randevu Talebi",
@@ -325,7 +335,7 @@
     "about": {
       "meta": {
         "title": "Hakkımızda | İstanbul Saç Simülasyonu (SMP) Kliniği",
-        "description": "İstanbul Zorlu Center'da scalp micropigmentation (SMP) uzmanlığımız: erkek tipi kellik, saç seyrelmesi ve iz kapatmada doğal görünümlü, minimal ve profesyonel yaklaşım."
+        "description": "İstanbul Şişli'de scalp micropigmentation (SMP) uzmanlığımız: erkek tipi kellik, saç seyrelmesi ve iz kapatmada doğal görünümlü, minimal ve profesyonel yaklaşım."
       },
       "hero": {
         "kicker": "HAKKIMIZDA",
@@ -364,7 +374,7 @@
     "simulation": "Saç Simülasyonu",
     "gallery": "Galeri",
     "services": "Hizmetler",
-    "airportTransfer": "Havalimanı Transferi",
+    "vipTransfer": "VIP Transfer",
     "faq": "SSS",
     "blog": "Blog",
     "contact": "İletişim",
