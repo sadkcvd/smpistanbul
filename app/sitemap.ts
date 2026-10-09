@@ -16,6 +16,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     "/sac-simulasyonu-istanbul",
     "/gallery",
     "/services",
+    "/vip-transfer",
     "/about",
     "/faq",
     "/contact",

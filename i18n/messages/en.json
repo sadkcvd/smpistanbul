@@ -10,7 +10,9 @@
     "hero": {
       "kicker": "ISTANBUL • SMP",
       "title": "Natural look, minimal touch",
-      "subtitle": "Hair simulation (SMP) creates a more balanced density perception with a premium and professional approach."
+      "subtitle": "Hair simulation (SMP) creates a more balanced density perception with a premium and professional approach.",
+      "cta": "Leave a message",
+      "watchVideo": "Watch video"
     },
     "cards": {
       "simulation": {
@@ -34,6 +36,22 @@
       "subtitle": "SMP outcomes depend on correct density planning and pigment selection.",
       "sample": "Before / After (sample)"
     },
+    "stats": {
+      "kicker": "BY THE NUMBERS",
+      "items": {
+        "clients": { "value": "500+", "label": "Happy clients" },
+        "experience": { "value": "5+", "label": "Years of experience" },
+        "satisfaction": { "value": "%100", "label": "Satisfaction rate" }
+      }
+    },
+    "clinicGallery": {
+      "ariaLabel": "Clinic gallery",
+      "kicker": "OUR CLINIC",
+      "title": "Our clinic in Şişli",
+      "subtitle": "A comfortable, hygienic, and professional environment for personalized SMP treatment.",
+      "previous": "Previous photo",
+      "next": "Next photo"
+    },
     "contact": {
       "kicker": "CONTACT",
       "title": "Leave a quick message",
@@ -44,6 +62,11 @@
         "hairLossType": "Hair loss type",
         "dateMessage": "Preferred date and short message"
       }
+    },
+    "whatsappCta": {
+      "heading": "Reach Us on WhatsApp",
+      "helperText": "The fastest way to get appointment info is WhatsApp. Send a message and we'll get right back to you.",
+      "cta": "Message Us on WhatsApp"
     },
     "form": {
       "heading": "Appointment Request",
@@ -83,7 +106,9 @@
       "kicker": "CLIENT REVIEWS",
       "title": "Real experiences, natural results",
       "subtitle": "Short notes from clients about their experience, process, and results.",
-      "ratingLabel": "{rating} stars"
+      "ratingLabel": "{rating} stars",
+      "previous": "Previous review",
+      "next": "Next review"
     }
   },
   "Services": {
@@ -142,6 +167,40 @@
       },
       "planningTitle": "Planning",
       "planningText": "Before sessions, the target area is mapped. Density distribution is planned considering daily use scenarios and natural hair direction.",
+      "cta": "Contact us"
+    }
+  },
+  "VipTransfer": {
+    "meta": {
+      "title": "VIP Transfer Service",
+      "description": "Exclusive to SMP Istanbul clients: a comfortable, reliable VIP transfer from the airport, your hotel, or anywhere in Istanbul to our clinic."
+    },
+    "hero": {
+      "kicker": "VIP TRANSFER",
+      "title": "Our VIP transfer service across Istanbul",
+      "subtitle": "From the airport, your hotel, or anywhere in Istanbul to our clinic, and back to your destination after your treatment — we provide a comfortable VIP transfer."
+    },
+    "directions": {
+      "toClinic": {
+        "title": "We'll pick you up",
+        "description": "Whether you're arriving from the airport, your hotel, or anywhere in Istanbul, we pick you up and bring you safely to our clinic in Şişli."
+      },
+      "toAirport": {
+        "title": "We'll drop you off",
+        "description": "After your appointment is complete, we pick you up from our clinic and drop you off at the airport, your hotel, or anywhere in Istanbul."
+      }
+    },
+    "details": {
+      "title": "How it works",
+      "items": {
+        "0": "Share your location and flight details (if any) when confirming your appointment",
+        "1": "We'll agree on the transfer time together",
+        "2": "Our driver will meet you at the agreed point"
+      }
+    },
+    "contact": {
+      "title": "Request a transfer",
+      "subtitle": "Share your location and appointment date, and we'll plan your transfer for you.",
       "cta": "Contact us"
     }
   },
@@ -237,8 +296,14 @@
     },
     "location": {
       "title": "Istanbul location",
-      "description": "Exact application location (sample) is shared after request. Directions are provided based on appointment plan.",
-      "mapPlaceholder": "Map (sample)"
+      "description": "Our clinic is located on Elmadağ Caddesi in Şişli. Use the buttons below to get directions via Google Maps or Apple Maps.",
+      "openGoogleMaps": "Open in Google Maps",
+      "openAppleMaps": "Open in Apple Maps"
+    },
+    "whatsappCta": {
+      "heading": "Reach Us on WhatsApp",
+      "helperText": "The fastest way to get appointment info is WhatsApp. Send a message and we'll get right back to you.",
+      "cta": "Message Us on WhatsApp"
     },
     "form": {
       "heading": "Appointment Request",
@@ -269,36 +334,36 @@
     },
     "about": {
       "meta": {
-        "title": "About",
-        "description": "Our premium SMP approach in Istanbul: minimal, professional, and focused on natural-looking planning."
+        "title": "About Us | Scalp Micropigmentation (SMP) Clinic in Istanbul",
+        "description": "Our scalp micropigmentation (SMP) expertise in Şişli, Istanbul: a natural-looking, minimal, and professional approach to male pattern baldness, hair thinning, and scar camouflage."
       },
       "hero": {
         "kicker": "ABOUT",
-        "title": "Minimal and professional approach",
-        "subtitle": "The process is handled holistically with tone/density planning, precise application, and aftercare guidance."
+        "title": "Istanbul's premium SMP clinic",
+        "subtitle": "We manage the scalp micropigmentation (SMP) process end to end as a leading hair transplant alternative, with a personalized tone/density plan, precise application, and aftercare guidance."
       },
-      "howTitle": "How do we work?",
+      "howTitle": "How does our SMP process work?",
       "cards": {
         "0": {
-          "title": "Natural harmony",
-          "text": "Tone and density are planned in harmony with hair direction and skin tone."
+          "title": "Natural hairline design",
+          "text": "Hairline and density are planned in harmony with hair direction, age, and skin tone for a natural-looking result."
         },
         "1": {
-          "title": "Clear process",
-          "text": "Expectations and steps are discussed transparently from the start."
+          "title": "Transparent consultation",
+          "text": "SMP pricing, number of sessions, and expected results are discussed clearly at the first consultation."
         },
         "2": {
-          "title": "Aftercare focus",
-          "text": "With proper care during recovery, outcomes appear more balanced."
+          "title": "Healing and aftercare support",
+          "text": "With aftercare guidance, the hair tattoo look becomes more balanced and long-lasting over time."
         },
         "3": {
-          "title": "Minimal aesthetics",
-          "text": "The goal is a premium and clean look without exaggeration."
+          "title": "Minimal aesthetics for baldness coverage",
+          "text": "For male pattern baldness, hair thinning, and scar coverage, we aim for a premium, clean look without exaggeration."
         }
       },
       "noteTitle": "Note",
-      "noteText": "Every skin type is different. For this reason, realistic goals are set during planning.",
-      "cta": "Contact us"
+      "noteText": "Every hair and skin type is different. That's why we set realistic, personalized goals during planning at our Istanbul clinic.",
+      "cta": "Contact Us for a Free Consultation"
     },
     "whatsappAria": "Send message via WhatsApp"
   },
@@ -309,6 +374,7 @@
     "simulation": "Hair Simulation",
     "gallery": "Gallery",
     "services": "Services",
+    "vipTransfer": "VIP Transfer",
     "faq": "FAQ",
     "blog": "Blog",
     "contact": "Contact",

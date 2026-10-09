@@ -1,11 +1,11 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useTranslations } from "next-intl";
 
 import { Container } from "@/components/site/Container";
+import { Logo } from "@/components/site/Logo";
 import { MobileNav } from "@/components/site/MobileNav";
 import { LanguageSwitcher } from "@/components/site/LanguageSwitcher";
 import { ThemeToggle } from "@/components/theme/ThemeToggle";
@@ -17,26 +17,29 @@ export function SiteHeader() {
   const pathname = usePathname();
   const locale = localeFromPathname(pathname);
   const t = useTranslations("Navigation");
+  const homeHref = localizedPath("/", locale);
+  const isHome = pathname === homeHref;
+
+  const scrollToTopIfHome = (href: string) => (e: React.MouseEvent) => {
+    if (href === homeHref && isHome) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
 
   return (
-    <header className="sticky top-0 z-40 border-b border-foreground/10 bg-background/90 backdrop-blur">
+    <header className="sticky top-0 z-40 border-b border-(--border) bg-(--surface)/90 backdrop-blur">
       <Container>
         <div className="flex min-w-0 items-center justify-between gap-3 py-3 sm:py-4">
 
           {/* Logo */}
           <Link
-            href={localizedPath("/", locale)}
+            href={homeHref}
             aria-label="SMP İstanbul Ana Sayfa"
             className="flex shrink-0 items-center"
+            onClick={scrollToTopIfHome(homeHref)}
           >
-            <Image
-              src="/images/logo.png"
-              alt="SMP İstanbul"
-              width={100}
-              height={40}
-              priority
-              className="h-auto"
-            />
+            <Logo />
           </Link>
 
           {/* Desktop Navigation */}
@@ -44,15 +47,19 @@ export function SiteHeader() {
             aria-label="Primary navigation"
             className="hidden min-w-0 flex-1 items-center justify-center gap-1 lg:flex"
           >
-            {navItems.map((item) => (
-              <Link
-                key={item.href}
-                href={localizedPath(item.href, locale)}
-                className="shrink-0 rounded-full px-3 py-2 text-sm font-semibold text-foreground/80 transition hover:bg-foreground/5 hover:text-foreground"
-              >
-                {t(item.translationKey)}
-              </Link>
-            ))}
+            {navItems.map((item) => {
+              const href = localizedPath(item.href, locale);
+              return (
+                <Link
+                  key={item.href}
+                  href={href}
+                  className="shrink-0 rounded-full px-3 py-2 text-sm font-semibold text-foreground/80 transition hover:bg-foreground/5 hover:text-foreground"
+                  onClick={scrollToTopIfHome(href)}
+                >
+                  {t(item.translationKey)}
+                </Link>
+              );
+            })}
           </nav>
 
           {/* Desktop Actions */}

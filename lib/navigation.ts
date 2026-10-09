@@ -4,16 +4,16 @@ export const navItems = [
       translationKey: "home",
     },
     {
-      href: "/sac-simulasyonu-istanbul",
-      translationKey: "simulation",
-    },
-    {
       href: "/gallery",
       translationKey: "gallery",
     },
     {
       href: "/services",
       translationKey: "services",
+    },
+    {
+      href: "/vip-transfer",
+      translationKey: "vipTransfer",
     },
     {
       href: "/faq",

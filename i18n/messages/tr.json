@@ -10,7 +10,9 @@
     "hero": {
       "kicker": "İSTANBUL • SMP",
       "title": "Doğal görünüm, minimal dokunuş",
-      "subtitle": "Saç simülasyonu (SMP) ile daha dengeli bir yoğunluk algısı. İstanbul’da premium ve profesyonel bir yaklaşım."
+      "subtitle": "Saç simülasyonu (SMP) ile daha dengeli bir yoğunluk algısı. İstanbul’da premium ve profesyonel bir yaklaşım.",
+      "cta": "Mesaj bırak",
+      "watchVideo": "Videoyu izle"
     },
     "cards": {
       "simulation": {
@@ -34,6 +36,22 @@
       "subtitle": "SMP’de başarı; doğru yoğunluk ve pigment seçimiyle birlikte gelir.",
       "sample": "Öncesi / Sonrası (örnek)"
     },
+    "stats": {
+      "kicker": "RAKAMLARLA BİZ",
+      "items": {
+        "clients": { "value": "500+", "label": "Memnun müşteri" },
+        "experience": { "value": "5+", "label": "Yıl deneyim" },
+        "satisfaction": { "value": "%100", "label": "Memnuniyet oranı" }
+      }
+    },
+    "clinicGallery": {
+      "ariaLabel": "Klinik galerisi",
+      "kicker": "KLİNİĞİMİZ",
+      "title": "Şişli'deki kliniğimiz",
+      "subtitle": "Konforlu, hijyenik ve profesyonel bir ortamda kişiye özel SMP uygulaması.",
+      "previous": "Önceki fotoğraf",
+      "next": "Sonraki fotoğraf"
+    },
     "contact": {
       "kicker": "İLETİŞİM",
       "title": "Kısa bir mesaj bırakın",
@@ -44,6 +62,11 @@
         "hairLossType": "Saç kaybı tipi",
         "dateMessage": "Tercih edilen tarih ve kısa mesaj"
       }
+    },
+    "whatsappCta": {
+      "heading": "Bize WhatsApp'tan Ulaşın",
+      "helperText": "Randevu ve bilgi almak için en hızlı yöntem WhatsApp. Mesaj gönderin, hemen dönüş yapalım.",
+      "cta": "WhatsApp'tan Yazın"
     },
     "form": {
       "heading": "Randevu Talebi",
@@ -83,7 +106,9 @@
       "kicker": "MÜŞTERİ YORUMLARI",
       "title": "Doğal görünüme giden yolda deneyimler",
       "subtitle": "Gerçek müşterilerden; süreç, sonuç ve bakım hakkında kısa notlar.",
-      "ratingLabel": "{rating} yıldız"
+      "ratingLabel": "{rating} yıldız",
+      "previous": "Önceki yorum",
+      "next": "Sonraki yorum"
     }
   },
   "Services": {
@@ -142,6 +167,40 @@
       },
       "planningTitle": "Planlama",
       "planningText": "Seans öncesinde hedef bölge haritalanır. Günlük kullanım senaryoları ve doğal saç yönü dikkate alınarak yoğunluk dağılımı planlanır.",
+      "cta": "İletişime geç"
+    }
+  },
+  "VipTransfer": {
+    "meta": {
+      "title": "VIP Transfer Hizmeti",
+      "description": "SMP İstanbul müşterilerine özel: havalimanı, otel veya İstanbul içinde herhangi bir noktadan kliniğimize konforlu ve güvenli VIP transfer hizmeti."
+    },
+    "hero": {
+      "kicker": "VIP TRANSFER",
+      "title": "İstanbul içinde VIP transfer hizmetimiz",
+      "subtitle": "Havalimanından, otelinizden veya İstanbul içindeki herhangi bir noktadan kliniğimize; işlem sonrası da istediğiniz noktaya konforlu VIP transfer sağlıyoruz."
+    },
+    "directions": {
+      "toClinic": {
+        "title": "Sizi alalım",
+        "description": "Havalimanından, otelinizden veya İstanbul içindeki herhangi bir noktadan sizi alıp Şişli'deki kliniğimize konforlu bir araçla ulaştırıyoruz."
+      },
+      "toAirport": {
+        "title": "Sizi bırakalım",
+        "description": "Randevunuz tamamlandıktan sonra sizi kliniğimizden alıp havalimanına, otelinize veya İstanbul içinde istediğiniz noktaya güvenle bırakıyoruz."
+      }
+    },
+    "details": {
+      "title": "Nasıl çalışır?",
+      "items": {
+        "0": "Randevu onayında konumunuzu ve varsa uçuş bilgilerinizi bizimle paylaşın",
+        "1": "Transfer saatini birlikte netleştirelim",
+        "2": "Sürücümüz sizi belirlenen noktada karşılasın"
+      }
+    },
+    "contact": {
+      "title": "Transfer talebi oluşturun",
+      "subtitle": "Konumunuzu ve randevu tarihinizi paylaşın, transferinizi sizin için planlayalım.",
       "cta": "İletişime geç"
     }
   },
@@ -237,8 +296,14 @@
     },
     "location": {
       "title": "İstanbul konum",
-      "description": "Uygulama lokasyonu (örnek) talep sonrası paylaşılır. Şehir içi randevu planına göre yönlendirme yapılır.",
-      "mapPlaceholder": "Harita (örnek)"
+      "description": "Kliniğimiz Şişli, Elmadağ Caddesi'nde yer almaktadır. Aşağıdaki butonlarla Google Maps veya Apple Maps üzerinden yol tarifi alabilirsiniz.",
+      "openGoogleMaps": "Google Maps'te Aç",
+      "openAppleMaps": "Apple Maps'te Aç"
+    },
+    "whatsappCta": {
+      "heading": "Bize WhatsApp'tan Ulaşın",
+      "helperText": "Randevu ve bilgi almak için en hızlı yöntem WhatsApp. Mesaj gönderin, hemen dönüş yapalım.",
+      "cta": "WhatsApp'tan Yazın"
     },
     "form": {
       "heading": "Randevu Talebi",
@@ -269,36 +334,36 @@
     },
     "about": {
       "meta": {
-        "title": "Hakkımızda",
-        "description": "İstanbul’da premium SMP yaklaşımımız: minimal, profesyonel ve doğal görünüm odaklı planlama."
+        "title": "Hakkımızda | İstanbul Saç Simülasyonu (SMP) Kliniği",
+        "description": "İstanbul Şişli'de scalp micropigmentation (SMP) uzmanlığımız: erkek tipi kellik, saç seyrelmesi ve iz kapatmada doğal görünümlü, minimal ve profesyonel yaklaşım."
       },
       "hero": {
         "kicker": "HAKKIMIZDA",
-        "title": "Minimal ve profesyonel yaklaşım",
-        "subtitle": "Süreç; ton/yoğunluk planı, hassas uygulama ve bakım yönlendirmesiyle bütün olarak ele alınır."
+        "title": "İstanbul'un premium SMP kliniği",
+        "subtitle": "Saç ekimi alternatifi olarak tercih edilen scalp micropigmentation (SMP) sürecini; kişiye özel ton/yoğunluk planı, hassas uygulama ve bakım yönlendirmesiyle uçtan uca yönetiyoruz."
       },
-      "howTitle": "Nasıl çalışıyoruz?",
+      "howTitle": "SMP sürecimiz nasıl işliyor?",
       "cards": {
         "0": {
-          "title": "Doğal uyum",
-          "text": "Ton ve yoğunluk, saç yönü ve cilt tonu ile uyumlu planlanır."
+          "title": "Doğal saç çizgisi tasarımı",
+          "text": "Saç çizgisi ve yoğunluk; saç yönü, yaş ve cilt tonuyla uyumlu, doğal görünümlü şekilde planlanır."
         },
         "1": {
-          "title": "Net süreç",
-          "text": "Beklentiler ve adımlar baştan şeffaf biçimde konuşulur."
+          "title": "Şeffaf randevu süreci",
+          "text": "SMP fiyatları, seans sayısı ve beklenen sonuçlar ilk görüşmede net biçimde konuşulur."
         },
         "2": {
-          "title": "Bakım odağı",
-          "text": "İyileşme döneminde doğru bakım ile sonuç daha dengeli görünür."
+          "title": "İyileşme ve bakım desteği",
+          "text": "Uygulama sonrası bakım rehberliğiyle saç dövmesi görünümü zamanla daha dengeli ve kalıcı hale gelir."
         },
         "3": {
-          "title": "Minimal estetik",
-          "text": "Abartıdan uzak, premium ve temiz bir görünüm hedeflenir."
+          "title": "Kellik kapatmada minimal estetik",
+          "text": "Erkek tipi kellik, saç seyrelmesi ve iz kapatmada abartısız, premium ve temiz bir görünüm hedeflenir."
         }
       },
       "noteTitle": "Not",
-      "noteText": "Her cilt farklıdır. Bu nedenle planlama aşamasında gerçekçi hedefler belirlenir.",
-      "cta": "İletişime geç"
+      "noteText": "Her saç ve cilt yapısı farklıdır. Bu nedenle planlama aşamasında İstanbul'daki kliniğimizde gerçekçi, kişiye özel hedefler belirlenir.",
+      "cta": "Ücretsiz Ön Görüşme İçin İletişime Geç"
     },
     "whatsappAria": "WhatsApp üzerinden mesaj gönder"
   },
@@ -309,6 +374,7 @@
     "simulation": "Saç Simülasyonu",
     "gallery": "Galeri",
     "services": "Hizmetler",
+    "vipTransfer": "VIP Transfer",
     "faq": "SSS",
     "blog": "Blog",
     "contact": "İletişim",

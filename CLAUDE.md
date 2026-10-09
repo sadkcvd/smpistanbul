@@ -91,6 +91,10 @@ Next.js ile ilgili kod yazmadan önce mümkün olduğunda:
 - Server-only kodun client bundle'a girmesine izin verme.
 - Browser API'leri, event handler'lar veya client state gerektirmeyen componentleri Client Component yapma.
 
+### Metadata Route Dosyaları (icon, apple-icon, opengraph-image, vb.)
+
+- Kodla üretilen metadata route'ları (`app/apple-icon.tsx` vb.) uzantısız URL'den servis edilir; `proxy.ts` matcher'ındaki dışlama listesinde olmazlarsa next-intl `/tr/apple-icon`'a yönlendirir → 404. Yeni böyle bir route eklersen listeye ekle, mevcutları çıkarma. Statik dosyalar (`app/icon.svg`) uzantılı olduğu için etkilenmez.
+
 ---
 
 ## 4. TypeScript ve Tip Güvenliği
@@ -229,6 +233,18 @@ SEO/refactor çalışmasına başlamadan önce `/plan` oluştur ve kullanıcı o
 
 UI değişikliklerinde mevcut tasarımı bozacak gereksiz görsel değişiklikler yapma.
 
+### Renk Sistemi
+
+- Birincil marka rengi (altın) token'ları: `app/globals.css` (`--brand-accent`, `--cta-gold`, `--cta-gold-hover`, `--text-on-cta`). Site genelinde birincil CTA/vurgu rengidir.
+- İkincil vurgu token'ları: `app/globals.css` (`--secondary-accent`, `--secondary-accent-hover`, `--secondary-accent-foreground`). Yalnızca seçici noktalarda kullanılır (link hover, harita CTA, galeri vurgusu/focus ring) — birincil rengin yerini almaz, bir öğeyi veya sayfanın tamamını bu renge çevirme.
+- Yeni custom property eklerken `@theme inline` bloğuna eklemeden, mevcut token'lar gibi `bg-(--token-adı)` arbitrary-shorthand sözdizimiyle kullan.
+
+### Medya ve Görsel Kaynakları
+
+- Ham/stok görselleri `public/images/`'e eklemeden önce optimize et (uzun kenar ~1600px, düşük dosya boyutu).
+- Klinik/ofis galerisine eklenecek görseller gerçekten bu kliniğe ait olmalı; başka bir gerçek hekim/hastaya veya tanımlanabilir başka bir işletmeye ait stok görseller kullanma (yanlış temsil riski).
+- Galeri/carousel ihtiyaçlarında mevcut `components/ui/carousel.tsx`'i (embla-carousel-react) reuse et, yeni bir carousel primitive'i yazma.
+
 ---
 
 ## 11. Yeni NPM Paketi Ekleme Kuralları
@@ -257,6 +273,22 @@ npm run lint
 npm run prisma:generate
 npm run prisma:migrate
 ```
+
+---
+
+## 13. Proje Spesifik Component ve Convention'lar
+
+- **Logo:** `components/site/Logo.tsx` — inline SVG, tema-uyumlu (`currentColor` / `--brand-accent`). Yeni logo kullanım yerlerinde bu component'i reuse et, raster `/images/logo.png`'yi tekrar import etme.
+- **Hero:** `components/sections/HeroSection.tsx` (Server) + `components/sections/HeroHeadline.tsx` (Client, metin/CTA/animasyon) + `components/media/HeroVideo.tsx` (Client, video mount-gate). Yeni hero metni eklerken `HeroSection.tsx`'i client yapma, metin/CTA değişikliklerini `HeroHeadline.tsx`'e ekle.
+- **Hero video/görsel ambians:** Video üzerindeki perde düz `bg-background/70` değil, iki katmanlı gradient (`bg-gradient-to-r` soldan güçlü/sağdan açık + `bg-gradient-to-t` alttan hafif) — amaç light modda videoyu beyaza boğmadan metin okunabilirliğini korumak. Sağdaki statik görsel kutusu `border-(--border) bg-(--surface)` (foreground/opacity değil, gerçek surface token'ları) + kenarlarda `--background`'a yumuşayan bir gradient katmanı kullanır, böylece hem dark hem light modda ortamla bütünleşir. Yeni video/görsel alanı eklerken bu iki katman pattern'ini reuse et.
+- **Hero video CTA:** `siteConfig.heroYoutubeUrl` (`lib/site.ts`, env: `NEXT_PUBLIC_HERO_YOUTUBE_URL`). Boşsa ilgili buton render olmaz; sahte/placeholder link commit etme.
+- **Klinik Galeri:** `components/gallery/ClinicGallery.tsx` + `lib/clinic-gallery.ts`. Mevcut `components/ui/carousel.tsx`'i kullan.
+- **Harita:** `components/site/ClinicMapCard.tsx` + `siteConfig.address`/`lat`/`lng` (`lib/site.ts`). `address` artık `NEXT_PUBLIC_ADRESS` env değişkeniyle override edilebilir (yoksa koddaki varsayılana düşer). Yeni harita kütüphanesi ekleme, deep-link (Google/Apple Maps) pattern'ini koru.
+- **Sayfa geçişi:** `components/site/PageTransition.tsx`, `app/[locale]/layout.tsx` içinde `<main>`'i sarmalar. `useReducedMotion` kontrolüne uy, `layout.tsx`'i client yapma.
+- **İletişim / Lead Capture:** Randevu formu (`components/forms/AppointmentRequestForm.tsx` + `/api/appointments`) şu an **kullanımda değil** ama silinmedi — kod kasıtlı olarak duruyor, geri açmak istenirse tek satırlık import/JSX değişikliğiyle geri getirilebilir. Bunun yerine tüm iletişim CTA'ları `components/forms/WhatsAppContactCard.tsx` (Server Component, `lib/whatsapp.ts`'teki `buildWhatsAppHref()` helper'ını kullanır) ile WhatsApp'a yönlendiriyor. Yeni bir iletişim/randevu bölümü eklerken varsayılan olarak `WhatsAppContactCard`'ı kullan, form'u geri getirmek açıkça istenmedikçe `AppointmentRequestForm`'u kullanma.
+- **VIP Transfer sayfası:** `app/[locale]/vip-transfer/page.tsx`, i18n namespace `VipTransfer`. Sadece havalimanı değil, İstanbul içinde genel VIP transfer hizmeti olarak çerçevelenir (otel, havalimanı, İstanbul içi herhangi bir nokta) — içerik yazarken bu genel kapsamı koru, sadece havalimanına daraltma.
+- **Navigasyon listesi ≠ site'nin tüm sayfaları:** `lib/navigation.ts`'teki `navItems`'tan bir sayfa çıkarmak o sayfayı silmez. Örnek: "Saç Simülasyonu" (`/sac-simulasyonu-istanbul`) navbar'da yok ama sayfa ve ana sayfadaki hızlı-nav kartı SEO için duruyor. Bir sayfayı "kaldıralım" denildiğinde önce bunun navbar'dan mı yoksa sitenin tamamından mı kaldırılmak istendiğini ayırt et.
+- **"Ana sayfaya dön" linkleri:** Next.js `<Link>`, zaten bulunduğun URL'e tıklandığında navigasyon yapmaz (no-op) — bu yüzden logo ve "Ana Sayfa" nav item'ı, `pathname` zaten home ise `onClick`'te manuel `window.scrollTo({top:0, behavior:"smooth"})` çağırır (`SiteHeader.tsx`, `MobileNav.tsx`). Aynı "zaten o sayfadayken tıklama" sorunu başka bir linkte çıkarsa aynı pattern'i kullan.
 
 ---
 
@@ -295,3 +327,26 @@ npm run prisma:migrate
 **Doğrulama:** `npx tsc --noEmit` → 0 hata, `npm run lint` → 0 hata/0 uyarı, `npm run build` → 34/34 statik sayfa başarıyla oluşturuldu.
 
 **Not:** `Next.js 16 uyumluluk taraması` sırasında `middleware.ts → proxy.ts` geçişinin projede zaten uygulanmış olduğu ve `layout.tsx`/`lib/seo.ts` içindeki metadata yapısının (`metadataBase`, `openGraph`, `twitter`, `robots`, `alternates`) güncel Next.js 16 Metadata API'siyle uyumlu olduğu teyit edildi; bu alanlarda değişiklik gerekmedi.
+
+### 2026-10-08 — Lüks SMP Dönüşümü (Renk, Hero, Klinik Galeri, Harita, SEO, Animasyon)
+
+**Kapsam:** Site genelinde lüks/kurumsal SMP kliniği vizyonu uygulandı: ikincil Midnight Blue vurgu rengi eklendi, logo/favicon SVG'ye geçirildi, Hero section full-bleed hale getirilip framer-motion animasyonu ve opsiyonel YouTube CTA'sı eklendi, Klinik Galeri bileşeni landing page'e eklendi, Zorlu Center harita entegrasyonu yapıldı, "Hakkımızda" sayfası SEO için yeniden yazıldı, global sayfa geçiş animasyonu eklendi. Yeni token/component/convention detayları için bkz. "10. Styling ve UI → Renk Sistemi / Medya ve Görsel Kaynakları" ve "13. Proje Spesifik Component ve Convention'lar".
+
+**Doğrulama:** Her değişiklik partisinden sonra `npx tsc --noEmit`, `npm run lint`, `npm run build` çalıştırıldı (hepsi temiz); `/tr`, `/tr/contact`, `/tr/about` sayfaları dev sunucusunda manuel kontrol edildi.
+
+### 2026-10-09 — UX Düzeltmeleri, İletişim Stratejisi Değişikliği, Sayfa/Navigasyon Revizyonu
+
+**Kapsam:** Önceki oturumun (`f3e75bb`) commit + push'undan sonra kullanıcı geri bildirimiyle gelen iki küçük parti:
+
+**1. Navigasyon, adres ve VIP Transfer:**
+- Logo/"Ana Sayfa" linkine zaten ana sayfadayken tıklamak artık sayfanın başına yumuşak scroll yapıyor (bkz. "13. Proje Spesifik Component ve Convention'lar → Ana sayfaya dön linkleri").
+- Adres "İnönü, Elmadağ Cd. No:48, 34373 Şişli/İstanbul" olarak güncellendi (`lib/site.ts`, artık `NEXT_PUBLIC_ADRESS` env ile override edilebiliyor); içerikteki tüm "Zorlu Center" referansları "Şişli"ye çevrildi.
+- "Saç Simülasyonu" navbar'dan kaldırıldı, sayfa ve ana sayfa kartı SEO için korundu (bkz. "Navigasyon listesi ≠ site'nin tüm sayfaları").
+- `/airport-transfer` → `/vip-transfer` olarak yeniden adlandırıldı ve İstanbul içi genel VIP transfer hizmetine genişletildi (namespace `VipTransfer`), `sitemap.ts`'e eklendi.
+
+**2. İletişim stratejisi ve Hero/galeri görsel ayarları:**
+- Randevu formu (`AppointmentRequestForm`) anasayfa ve İletişim sayfasında kullanımdan kaldırıldı, yerine WhatsApp'a yönlendiren `WhatsAppContactCard` + `lib/whatsapp.ts` geldi (form kodu silinmedi, bkz. "İletişim / Lead Capture").
+- Hero section'daki video perdesi ve sağdaki statik görsel kutusu, dark/light modda ortamla uyumsuz duran düz renk/gölge yerine gradient tabanlı, tema-duyarlı bir görünüme kavuşturuldu (bkz. "Hero video/görsel ambians").
+- Galeri sayfasındaki birincil ÖNCE/SONRA slider'ının genişliği/oranı ince ayar yapıldı.
+
+**Doğrulama:** Her değişiklik partisinden sonra `npx tsc --noEmit`, `npm run lint`, `npm run build` çalıştırıldı (hepsi temiz); ilgili sayfalar dev sunucusunda manuel kontrol edildi.

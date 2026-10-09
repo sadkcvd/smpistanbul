@@ -1,6 +1,7 @@
 import { buildMetadata } from "@/lib/seo";
 import { localizedPath, normalizeLocale } from "@/lib/i18n";
 import { getTranslations } from "next-intl/server";
+import { PageHero } from "@/components/site/PageHero";
 
 export async function generateMetadata({
   params,
@@ -41,19 +42,12 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
 
   return (
     <div>
-      <div className="border-b border-foreground/10 bg-foreground/5 py-8">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <div className="text-sm font-bold tracking-widest text-[var(--brand-accent)]">
-            {t("hero.kicker")}
-          </div>
-          <h1 className="mt-3 text-3xl font-black tracking-tight text-foreground sm:text-4xl">
-            {t("hero.title")}
-          </h1>
-          <p className="mt-4 max-w-2xl text-sm font-semibold leading-7 text-foreground/70">
-            {t("hero.subtitle")}
-          </p>
-        </div>
-      </div>
+      <PageHero
+        kicker={t("hero.kicker")}
+        title={t("hero.title")}
+        subtitle={t("hero.subtitle")}
+        className="py-8"
+      />
 
       <section className="py-10 sm:py-12">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
@@ -61,7 +55,7 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
             {services.map((s) => (
               <div
                 key={s.title}
-                className="rounded-2xl border border-foreground/10 bg-background p-5 shadow-sm"
+                className="rounded-2xl border border-(--border) bg-(--surface) p-5 shadow-sm"
               >
                 <div className="text-base font-black text-foreground">
                   {s.title}
@@ -80,7 +74,7 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
             ))}
           </div>
 
-          <div className="mt-10 rounded-2xl border border-foreground/10 bg-foreground/5 p-6">
+          <div className="mt-10 rounded-2xl border border-(--border) bg-(--background-secondary) p-6">
             <h2 className="text-xl font-black tracking-tight text-foreground">
               {t("contact.title")}
             </h2>

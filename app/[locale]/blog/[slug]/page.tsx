@@ -53,7 +53,7 @@ export default async function BlogPostPage({
 
   return (
     <div>
-      <div className="border-b border-foreground/10 bg-foreground/5 py-8">
+      <div className="border-b border-(--border) bg-(--background-secondary) py-8">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-3 text-sm font-semibold text-foreground/70">
             <Link href={localizedPath("/blog", locale)} className="hover:text-foreground">

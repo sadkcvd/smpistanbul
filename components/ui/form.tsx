@@ -71,7 +71,7 @@ export function FormMessage({
   return (
     <p
       className={cn(
-        "text-sm font-semibold text-[var(--brand-accent)]",
+        "text-sm font-semibold text-(--brand-accent)",
         className
       )}
       role="alert"

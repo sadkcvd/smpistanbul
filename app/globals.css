@@ -6,35 +6,40 @@
      ========================================= */
 
   /* Main surfaces */
-  --background: #FAFAF9;
-  --background-secondary: #F3F3F1;
-  --surface: #FFFFFF;
-  --surface-muted: #EAEAE7;
+  --background: #FBF7F0; 
+  --background-secondary: #F4EDE0;
+  --surface: #FFFEFB;
+  --surface-muted: #EFE6D8;
 
   /* Main text */
-  --foreground: #171717;
-  --foreground-secondary: #404040;
-  --foreground-muted: #525252;
+  --foreground: #1B140C;
+  --foreground-secondary: #4A3F31;
+  --foreground-muted: #6B5D4C;
 
   /* Brand */
-  --primary: #111111;
+  --primary: #1B140C;
 
-  /* Gold - BRAND / DECORATION */
-  --brand-accent: #8A6500;
-  --secondary-gold: #8A6500;
+  /* Gold - BRAND / DECORATION (darker, for text-on-background AA) */
+  --brand-accent: #7C5E1E;
+  --secondary-gold: #7C5E1E;
 
-  /* CTA */
-  --cta-gold: #8A6500;
-  --cta-gold-hover: #6F5100;
-  --text-on-cta: #FFFFFF;
+  /* CTA (lighter champagne gold, paired with dark text-on-cta below) */
+  --cta-gold: #A9812E;
+  --cta-gold-hover: #BE9A50;
+  --text-on-cta: #1B140C;
 
   /* WhatsApp */
   --cta-wp: #16803A;
   --cta-wp-hover: #116B30;
 
   /* Borders */
-  --border: #D4D4D0;
-  --border-strong: #A3A3A0;
+  --border: #E3D9C6;
+  --border-strong: #C9B996;
+
+  /* Midnight Blue - SECONDARY ACCENT (selective use: links, badges, map/CTA) */
+  --secondary-accent: #1E3A5F;
+  --secondary-accent-hover: #16304F;
+  --secondary-accent-foreground: #F5F7FA;
 }
 
 .dark {
@@ -43,35 +48,40 @@
      ========================================= */
 
   /* Main surfaces */
-  --background: #0D0D0D;
-  --background-secondary: #171717;
-  --surface: #1C1C1C;
-  --surface-muted: #262626;
+  --background: #0A0D10;
+  --background-secondary: #10141A;
+  --surface: #14181D;
+  --surface-muted: #1B2027;
 
   /* Main text */
-  --foreground: #F5F5F5;
-  --foreground-secondary: #D4D4D4;
-  --foreground-muted: #A3A3A3;
+  --foreground: #F5EFE0;
+  --foreground-secondary: #D8CFB8;
+  --foreground-muted: #9C917A;
 
   /* Brand */
-  --primary: #F5F5F5;
+  --primary: #F5EFE0;
 
   /* Gold */
-  --brand-accent: #E5B93F;
-  --secondary-gold: #E5B93F;
+  --brand-accent: #C9A96A;
+  --secondary-gold: #C9A96A;
 
   /* CTA */
-  --cta-gold: #E5B93F;
-  --cta-gold-hover: #F0CC63;
-  --text-on-cta: #000000;
+  --cta-gold: #C9A96A;
+  --cta-gold-hover: #DFC48C;
+  --text-on-cta: #0A0D10;
 
   /* WhatsApp */
   --cta-wp: #39D879;
   --cta-wp-hover: #50E48A;
 
   /* Borders */
-  --border: #404040;
-  --border-strong: #666666;
+  --border: #262B31;
+  --border-strong: #3A4048;
+
+  /* Midnight Blue - SECONDARY ACCENT (selective use: links, badges, map/CTA) */
+  --secondary-accent: #4C7FBF;
+  --secondary-accent-hover: #6B96CC;
+  --secondary-accent-foreground: #0A0D10;
 }
 
 @theme inline {
@@ -89,7 +99,7 @@ body {
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 96px;
+  scroll-padding-top: 80px;
 }
 
 a {
@@ -99,7 +109,7 @@ a {
 
 /* Keep anchor targets visible under sticky header */
 [id] {
-  scroll-margin-top: 96px;
+  scroll-margin-top: 80px;
 }
 
 @media (prefers-reduced-motion: reduce) {

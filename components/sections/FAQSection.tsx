@@ -29,7 +29,7 @@ export async function FAQSection({ id, locale = "tr" }: { id?: string; locale?: 
     <section id={id} aria-label={t("section.ariaLabel")} className="py-12">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col gap-2">
-          <div className="text-sm font-bold tracking-widest text-[var(--brand-accent)]">
+          <div className="text-sm font-bold tracking-widest text-(--brand-accent)">
             {t("section.kicker")}
           </div>
           <h2 className="text-2xl font-black tracking-tight text-foreground sm:text-3xl">
