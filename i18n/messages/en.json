@@ -39,7 +39,7 @@
     "stats": {
       "kicker": "BY THE NUMBERS",
       "items": {
-        "clients": { "value": "500+", "label": "Happy clients" },
+        "clients": { "value": "5000+", "label": "Happy clients" },
         "experience": { "value": "5+", "label": "Years of experience" },
         "satisfaction": { "value": "%100", "label": "Satisfaction rate" }
       }

@@ -39,7 +39,7 @@
     "stats": {
       "kicker": "RAKAMLARLA BİZ",
       "items": {
-        "clients": { "value": "500+", "label": "Memnun müşteri" },
+        "clients": { "value": "5000+", "label": "Memnun müşteri" },
         "experience": { "value": "5+", "label": "Yıl deneyim" },
         "satisfaction": { "value": "%100", "label": "Memnuniyet oranı" }
       }
